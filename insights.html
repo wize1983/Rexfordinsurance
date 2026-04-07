@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insights — Rexford Insurance Solutions</title>
+<meta name="description" content="Practical guidance on risk management, legacy planning, and business insurance for owners, families, and advisors. Published by Rexford Insurance Solutions.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0D1B2A;
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --cream: #F5F0E8;
+  --warm-white: #FDFAF5;
+  --gray: #6B7280;
+  --light-gray: #E8E4DC;
+  --dark-gold: #A07830;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--warm-white); color: var(--navy); overflow-x: hidden; font-size: 18px; }
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 20px 60px; display: flex; justify-content: space-between; align-items: center; background: rgba(253,250,245,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--light-gray); }
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; letter-spacing: 0.05em; color: var(--navy); text-decoration: none; }
+.logo span { color: var(--gold); }
+nav ul { list-style: none; display: flex; gap: 40px; align-items: center; }
+nav ul a { text-decoration: none; color: var(--navy); font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.3s; }
+nav ul a:hover { color: var(--gold); }
+nav ul a.active { color: var(--gold); border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
+.nav-cta { background: var(--navy); color: var(--warm-white) !important; padding: 10px 24px; border-radius: 2px; transition: background 0.3s !important; }
+.nav-cta:hover { background: var(--gold) !important; color: var(--navy) !important; }
+.hero { background: var(--navy); padding: 160px 60px 100px; text-align: center; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.05) 0%, transparent 50%); }
+.hero-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; position: relative; }
+.hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(42px, 6vw, 72px); font-weight: 300; color: var(--warm-white); line-height: 1.1; margin-bottom: 24px; position: relative; }
+.hero h1 em { font-style: italic; color: var(--gold-light); }
+.hero p { font-size: 17px; font-weight: 300; color: rgba(253,250,245,0.65); max-width: 560px; margin: 0 auto; line-height: 1.8; position: relative; }
+.filters { background: var(--cream); padding: 32px 60px; display: flex; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--light-gray); position: sticky; top: 65px; z-index: 50; }
+.filter-btn { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 20px; border: 1px solid var(--light-gray); background: transparent; color: var(--gray); cursor: pointer; transition: all 0.3s; font-family: 'DM Sans', sans-serif; }
+.filter-btn:hover, .filter-btn.active { border-color: var(--gold); color: var(--navy); background: var(--warm-white); }
+.featured { padding: 80px 60px 0; max-width: 1300px; margin: 0 auto; }
+.featured-card { border: 1px solid var(--light-gray); display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; transition: all 0.3s; }
+.featured-card:hover { border-color: var(--gold); box-shadow: 0 12px 40px rgba(13,27,42,0.08); }
+.featured-visual { background: var(--navy); padding: 60px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+.featured-visual::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 60%, rgba(201,168,76,0.12) 0%, transparent 60%); }
+.featured-badge { font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; position: relative; }
+.featured-visual h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 42px); font-weight: 300; color: var(--warm-white); line-height: 1.2; position: relative; }
+.featured-visual h2 em { font-style: italic; color: var(--gold-light); }
+.featured-body { padding: 60px; display: flex; flex-direction: column; justify-content: center; background: var(--warm-white); }
+.featured-tag { font-size: 10px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+.featured-excerpt { font-size: 16px; font-weight: 300; line-height: 1.9; color: var(--gray); margin-bottom: 32px; }
+.featured-cta { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 4px; display: inline-block; transition: color 0.3s; }
+.featured-cta:hover { color: var(--gold); }
+.blog-grid { padding: 60px 60px 80px; max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; }
+.blog-card { background: var(--warm-white); border: 1px solid var(--light-gray); padding: 36px; transition: all 0.3s; display: flex; flex-direction: column; position: relative; overflow: hidden; }
+.blog-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.4s ease; }
+.blog-card:hover::before { height: 100%; }
+.blog-card:hover { border-color: var(--gold); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13,27,42,0.06); }
+.blog-tag { font-size: 10px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; display: block; }
+.blog-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--navy); line-height: 1.3; margin-bottom: 14px; }
+.blog-excerpt { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--gray); flex-grow: 1; margin-bottom: 24px; }
+.blog-cta { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: color 0.3s; }
+.blog-cta:hover { color: var(--dark-gold); }
+.cta-strip { background: var(--gold); padding: 60px; text-align: center; }
+.cta-strip h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 48px); font-weight: 300; color: var(--navy); margin-bottom: 16px; }
+.cta-strip p { font-size: 15px; font-weight: 300; color: rgba(13,27,42,0.7); margin-bottom: 36px; }
+.btn-primary { display: inline-block; background: var(--navy); color: var(--warm-white); padding: 16px 40px; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; transition: all 0.3s; font-family: 'DM Sans', sans-serif; }
+.btn-primary:hover { background: var(--dark-gold); }
+footer { background: #070E17; padding: 40px 60px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201,168,76,0.15); }
+footer p { font-size: 12px; color: rgba(253,250,245,0.3); letter-spacing: 0.05em; }
+@media (max-width: 768px) {
+  nav { padding: 16px 24px; } nav ul { display: none; } .hero { padding: 120px 24px 60px; } .filters { padding: 24px; top: 57px; } .featured { padding: 48px 24px 0; } .featured-card { grid-template-columns: 1fr; } .featured-visual { padding: 40px 32px; } .featured-body { padding: 40px 32px; } .blog-grid { padding: 40px 24px 60px; grid-template-columns: 1fr; } .cta-strip { padding: 60px 24px; } footer { flex-direction: column; gap: 12px; text-align: center; padding: 32px 24px; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">Rexford <span>Insurance</span></a>
+  <ul>
+    <li><a href="index.html#legacy">Legacy Planning</a></li>
+    <li><a href="index.html#risk">Risk Advisory</a></li>
+    <li><a href="insights.html" class="active">Insights</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+<div class="hero">
+  <p class="hero-eyebrow">Rexford Insights</p>
+  <h1>Know more.<br><em>Risk less.</em></h1>
+  <p>Practical guidance for business owners, families, and the advisors who serve them — written by people who've been inside complex operations.</p>
+</div>
+<div class="filters">
+  <button onclick="filterPosts('all')" class="filter-btn active" data-filter="all">All Topics</button>
+  <button onclick="filterPosts('legacy')" class="filter-btn" data-filter="legacy">Legacy Planning</button>
+  <button onclick="filterPosts('risk')" class="filter-btn" data-filter="risk">Risk Advisory</button>
+  <button onclick="filterPosts('business')" class="filter-btn" data-filter="business">Business Owners</button>
+  <button onclick="filterPosts('cyber')" class="filter-btn" data-filter="cyber">Cyber & Tech</button>
+  <button onclick="filterPosts('california')" class="filter-btn" data-filter="california">California</button>
+</div>
+<div class="featured" id="featured-section">
+  <div class="featured-card">
+    <div class="featured-visual">
+      <p class="featured-badge">Featured Insight</p>
+      <h2>Indecision Fatigue Is Costing Your Business — But the <em>Most Expensive Version Is Personal</em></h2>
+    </div>
+    <div class="featured-body">
+      <span class="featured-tag">Business Owners · Legacy Planning</span>
+      <p class="featured-excerpt">You know this meeting. The analysis is done. Three people gave the same recommendation. And then someone says, "Let's get everyone's perspective." The most dangerous version of indecision fatigue isn't the meeting that never ends. It's the life insurance conversation that never starts.</p>
+      <a href="indecision-fatigue.html" class="featured-cta">Read the Full Insight →</a>
+    </div>
+  </div>
+</div>
+<div class="blog-grid" id="blog-grid">
+  <div class="blog-card" data-category="business legacy"><span class="blog-tag">Business Owners</span><h3 class="blog-title">You're Great at Making Decisions. Except This One.</h3><p class="blog-excerpt">Business owners make high-stakes decisions every day. They just keep deferring this one — and it's the one with no second chance.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+  <div class="blog-card" data-category="risk california business"><span class="blog-tag">Risk Advisory</span><h3 class="blog-title">Does Your California Business Have a Commercial Umbrella Policy?</h3><p class="blog-excerpt">You wouldn't walk out in a rainstorm without an umbrella. So why is your business operating without one — especially when the storm has been building for years?</p><a href="commercial-umbrella-california.html" class="blog-cta">Read the Insight →</a></div>
+  <div class="blog-card" data-category="cyber business"><span class="blog-tag">Cyber & Tech</span><h3 class="blog-title">Big Tobacco Called. It Wants to Warn You About Big Tech.</h3><p class="blog-excerpt">The playbook is familiar. Deny the harm. Delay the regulation. By the time the dust settles, the exposure is already inside your business.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+  <div class="blog-card" data-category="risk california business"><span class="blog-tag">California</span><h3 class="blog-title">California Senior Living Operators: Workers' Comp</h3><p class="blog-excerpt">Senior living and skilled nursing operations carry some of the highest workers' comp exposure in California.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+  <div class="blog-card" data-category="risk business"><span class="blog-tag">Risk Advisory</span><h3 class="blog-title">The Coverage Gap Costing Business Owners Millions</h3><p class="blog-excerpt">It's not the claim you see coming. It's the gap between what you think you're covered for and what's actually written in the policy.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+  <div class="blog-card" data-category="risk business"><span class="blog-tag">Risk Advisory</span><h3 class="blog-title">Situational Awareness Is Your Best Insurance</h3><p class="blog-excerpt">Before the claim, before the lawsuit, before the loss — there's a moment where you could have seen it coming. Most businesses miss it.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+  <div class="blog-card" data-category="legacy business"><span class="blog-tag">Legacy Planning</span><h3 class="blog-title">"I Don't Need Life Insurance" — Here's Why That's Risky</h3><p class="blog-excerpt">It's the most common thing we hear. And it's almost never the full picture.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+  <div class="blog-card" data-category="cyber business"><span class="blog-tag">Cyber & Tech</span><h3 class="blog-title">AI Cyber Insurance: Your Business Is Already Exposed</h3><p class="blog-excerpt">AI tools are inside your business whether you deployed them or not. The liability question isn't whether it will happen. It's whether you're covered when it does.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+  <div class="blog-card" data-category="risk california business"><span class="blog-tag">Risk Advisory</span><h3 class="blog-title">When Senior Living Operations Drift</h3><p class="blog-excerpt">Operational drift in senior living is quiet, gradual, and expensive. It shows up in claims before it shows up on your radar.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+  <div class="blog-card" data-category="california"><span class="blog-tag">California</span><h3 class="blog-title">Kaiser Permanente vs PPO California</h3><p class="blog-excerpt">The choice between Kaiser and a PPO isn't just about premiums. It's about how your employees access care and what that means for your business.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+  <div class="blog-card" data-category="risk business"><span class="blog-tag">Risk Advisory</span><h3 class="blog-title">"We're Covered" — Are You Sure?</h3><p class="blog-excerpt">It's the most expensive assumption in business insurance. The gaps that matter most are the ones nobody told you about.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+  <div class="blog-card" data-category="legacy business"><span class="blog-tag">Legacy Planning</span><h3 class="blog-title">The Life Insurance Gap: Why Employer Coverage Isn't Enough</h3><p class="blog-excerpt">Group life through your employer feels like protection. It's not.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+  <div class="blog-card" data-category="risk business"><span class="blog-tag">Risk Advisory</span><h3 class="blog-title">Commercial Risk Management 2026</h3><p class="blog-excerpt">The risk landscape for California businesses has shifted. Here's what middle-market operators need to be thinking about this year.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+  <div class="blog-card" data-category="legacy california"><span class="blog-tag">Legacy Planning</span><h3 class="blog-title">Foreign National Estate Tax & ILIT Planning California</h3><p class="blog-excerpt">Foreign nationals with U.S. assets face a dramatically different estate tax exposure than U.S. citizens.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+  <div class="blog-card" data-category="legacy"><span class="blog-tag">Legacy Planning</span><h3 class="blog-title">ILITs, Annual Gifting, and Estate Planning in Washington State</h3><p class="blog-excerpt">Washington has its own estate tax — and its own planning opportunities.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+  <div class="blog-card" data-category="legacy california"><span class="blog-tag">Legacy Planning</span><h3 class="blog-title">Indexed Universal Life Insurance: A California Strategy</h3><p class="blog-excerpt">IUL isn't for everyone. But for the right California client it plays a specific role in a broader plan.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+  <div class="blog-card" data-category="california"><span class="blog-tag">California</span><h3 class="blog-title">California Medicare & Senior Planning Guide</h3><p class="blog-excerpt">Medicare decisions made at 65 have consequences that follow seniors for years.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+  <div class="blog-card" data-category="legacy business"><span class="blog-tag">Legacy Planning</span><h3 class="blog-title">Premium Financing for Life Insurance in California</h3><p class="blog-excerpt">For high-net-worth clients who need large life insurance coverage, premium financing can make the structure work without liquidating assets.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+  <div class="blog-card" data-category="business legacy"><span class="blog-tag">Business Owners</span><h3 class="blog-title">Buy-Sell Insurance for Business Owners</h3><p class="blog-excerpt">A buy-sell agreement without funding is a legal document that creates conflict instead of resolving it.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+  <div class="blog-card" data-category="risk business"><span class="blog-tag">Risk Advisory</span><h3 class="blog-title">Why Businesses Turn to an Excess Broker</h3><p class="blog-excerpt">When standard markets say no, excess and surplus lines brokers are where businesses find coverage.</p><a href="index.html#contact" class="blog-cta">Contact Us →</a></div>
+</div>
+<div class="cta-strip">
+  <h2>Complimentary Risk Audit</h2>
+  <p>No obligation. No pitch. Just a fresh set of eyes on what you have.<br>Most business owners are surprised by what we find.</p>
+  <a href="index.html#contact" class="btn-primary">Request Your Free Audit</a>
+</div>
+<footer>
+  <a href="index.html" class="logo" style="color: var(--warm-white);">Rexford <span>Insurance</span></a>
+  <p>Rexford Insurance Solutions &nbsp;|&nbsp; California &nbsp;|&nbsp; Lic. 6017874</p>
+  <p style="color: rgba(253,250,245,0.2); font-size: 11px;">© 2026 Rexford Insurance Solutions</p>
+</footer>
+<script>
+function filterPosts(category) {
+  const cards = document.querySelectorAll('.blog-card');
+  const buttons = document.querySelectorAll('.filter-btn');
+  const featured = document.getElementById('featured-section');
+  buttons.forEach(b => b.classList.remove('active'));
+  document.querySelector('[data-filter="' + category + '"]').classList.add('active');
+  featured.style.display = (category === 'all' || 'business legacy'.includes(category)) ? 'block' : 'none';
+  cards.forEach(card => { card.style.display = (category === 'all' || card.dataset.category.includes(category)) ? 'flex' : 'none'; });
+}
+</script>
+</body>
+</html>
