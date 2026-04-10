@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Life Insurance Gap: Why Employer Coverage Isn't Enough — Rexford Insurance Solutions</title>
+  <meta name="description" content="Most families believe the box is checked. It isn't. The gap between what employer life insurance provides and what a household actually needs is significant — and most families have never done that math.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0D1B2A;
+      --gold: #C9A84C;
+      --gold-light: #E8C97A;
+      --cream: #F5F0E8;
+      --warm-white: #FDFAF5;
+      --gray: #6B7280;
+      --light-gray: #E8E4DC;
+      --dark-gold: #A07830;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--warm-white); color: var(--navy); overflow-x: hidden; font-size: 18px; }
+
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      padding: 20px 60px; display: flex; justify-content: space-between; align-items: center;
+      background: rgba(253,250,245,0.95); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; letter-spacing: 0.05em; color: var(--navy); text-decoration: none; }
+    .logo span { color: var(--gold); }
+    nav ul { list-style: none; display: flex; gap: 40px; align-items: center; }
+    nav ul a { text-decoration: none; color: var(--navy); font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.3s; }
+    nav ul a:hover { color: var(--gold); }
+    .nav-cta { background: var(--navy); color: var(--warm-white) !important; padding: 10px 24px; border-radius: 2px; transition: background 0.3s !important; }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--navy) !important; }
+
+    .hero {
+      background: var(--navy); padding: 160px 60px 100px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.05) 0%, transparent 50%);
+    }
+    .hero-inner { position: relative; max-width: 800px; margin: 0 auto; }
+    .breadcrumb { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(201,168,76,0.7); margin-bottom: 28px; }
+    .breadcrumb a { color: rgba(201,168,76,0.7); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 62px); font-weight: 300; color: var(--warm-white); line-height: 1.15; margin-bottom: 28px; }
+    .hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero-meta { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+    .hero-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,168,76,0.3); padding: 6px 14px; }
+
+    .article-wrap { max-width: 740px; margin: 0 auto; padding: 80px 60px 100px; }
+
+    .lede { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 2.5vw, 26px); font-weight: 300; font-style: italic; line-height: 1.7; color: var(--navy); border-left: 3px solid var(--gold); padding-left: 28px; margin-bottom: 56px; }
+
+    .body h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 34px); font-weight: 400; color: var(--navy); margin: 56px 0 20px; line-height: 1.25; }
+    .body p { font-size: 17px; font-weight: 300; line-height: 1.9; color: #2C3E50; margin-bottom: 24px; }
+
+    .callout {
+      background: var(--cream); border-left: 4px solid var(--gold);
+      padding: 32px 36px; margin: 48px 0;
+    }
+    .callout p { font-size: 16px; font-weight: 300; line-height: 1.85; color: var(--navy); margin: 0; }
+    .callout strong { font-weight: 500; }
+
+    .diagnostic {
+      border: 1px solid var(--light-gray); padding: 40px; margin: 48px 0;
+      background: var(--warm-white);
+    }
+    .diagnostic-label {
+      font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 20px;
+    }
+    .diagnostic ul { list-style: none; padding: 0; }
+    .diagnostic ul li {
+      font-size: 16px; font-weight: 300; color: var(--navy);
+      padding: 12px 0; border-bottom: 1px solid var(--light-gray);
+      display: flex; align-items: flex-start; gap: 14px; line-height: 1.6;
+    }
+    .diagnostic ul li:last-child { border-bottom: none; }
+    .diagnostic ul li::before { content: '→'; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+
+    .scenario-card {
+      border: 1px solid var(--light-gray); padding: 36px; margin: 28px 0;
+      position: relative; overflow: hidden;
+    }
+    .scenario-card::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 3px; height: 100%; background: var(--gold);
+    }
+    .scenario-label { font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .scenario-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--navy); margin-bottom: 12px; }
+    .scenario-card p { font-size: 16px; font-weight: 300; line-height: 1.85; color: #4A5568; margin: 0; }
+
+    .math-block {
+      background: var(--navy); color: var(--warm-white); padding: 48px;
+      margin: 48px 0; text-align: center; position: relative; overflow: hidden;
+    }
+    .math-block::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.08) 0%, transparent 70%);
+    }
+    .math-block p { font-size: 14px; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(253,250,245,0.5); margin-bottom: 16px; position: relative; }
+    .math-block .math-figure { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 5vw, 52px); font-weight: 300; color: var(--gold-light); position: relative; margin-bottom: 12px; }
+    .math-block .math-note { font-size: 15px; font-weight: 300; color: rgba(253,250,245,0.65); position: relative; line-height: 1.7; }
+
+    .faq-block { margin: 56px 0; }
+    .faq-block h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 34px); font-weight: 400; color: var(--navy); margin-bottom: 32px; }
+    .faq-item { border-bottom: 1px solid var(--light-gray); padding: 28px 0; }
+    .faq-item:first-of-type { border-top: 1px solid var(--light-gray); }
+    .faq-q { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--navy); margin-bottom: 12px; }
+    .faq-a { font-size: 16px; font-weight: 300; line-height: 1.85; color: #4A5568; }
+
+    .article-cta {
+      background: var(--navy); padding: 56px; margin: 64px 0 0; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .article-cta::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.08) 0%, transparent 70%);
+    }
+    .article-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 3.5vw, 40px); font-weight: 300; color: var(--warm-white); margin-bottom: 16px; position: relative; }
+    .article-cta h2 em { font-style: italic; color: var(--gold-light); }
+    .article-cta p { font-size: 15px; font-weight: 300; color: rgba(253,250,245,0.6); margin-bottom: 36px; line-height: 1.8; position: relative; max-width: 480px; margin-left: auto; margin-right: auto; margin-bottom: 36px; }
+    .btn-primary {
+      display: inline-block; background: var(--gold); color: var(--navy);
+      padding: 16px 40px; font-size: 12px; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; text-decoration: none; transition: all 0.3s;
+      font-family: 'DM Sans', sans-serif; position: relative;
+    }
+    .btn-primary:hover { background: var(--gold-light); }
+
+    .disclaimer { font-size: 12px; font-weight: 300; color: var(--gray); line-height: 1.7; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--light-gray); }
+
+    footer {
+      background: #070E17; padding: 40px 60px;
+      display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid rgba(201,168,76,0.15);
+    }
+    footer p { font-size: 12px; color: rgba(253,250,245,0.3); letter-spacing: 0.05em; }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      nav ul { display: none; }
+      .hero { padding: 120px 24px 60px; }
+      .article-wrap { padding: 48px 24px 60px; }
+      .article-cta { padding: 48px 24px; }
+      .math-block { padding: 40px 24px; }
+      footer { flex-direction: column; gap: 12px; text-align: center; padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Rexford <span>Insurance</span></a>
+  <ul>
+    <li><a href="index.html#legacy">Legacy Planning</a></li>
+    <li><a href="index.html#risk">Risk Advisory</a></li>
+    <li><a href="insights.html">Insights</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="breadcrumb"><a href="insights.html">Insights</a> &nbsp;/&nbsp; Legacy Planning</p>
+    <h1>The Life Insurance Gap:<br><em>Why Employer Coverage Isn't Enough</em></h1>
+    <div class="hero-meta">
+      <span class="hero-tag">Legacy Planning</span>
+      <span class="hero-tag">Business Owners</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-wrap">
+
+  <p class="lede">
+    Most Americans believe they're covered. They have life insurance through work. The box is checked. The benefit exists. It feels responsible. But employer-provided life insurance was never designed to fully protect a household. It was designed to cover a funeral and buy a few months of time.
+  </p>
+
+  <div class="body">
+
+    <h2>What Employer Life Insurance Actually Covers</h2>
+
+    <p>Most workplace life insurance policies provide coverage equal to one or two times your annual salary. On the surface, that sounds meaningful. In practice, it covers:</p>
+
+    <div class="diagnostic">
+      <p class="diagnostic-label">What 1–2x Salary Actually Buys</p>
+      <ul>
+        <li>Funeral and burial expenses</li>
+        <li>A few months of household bills</li>
+        <li>A short runway before the financial reality sets in</li>
+      </ul>
+    </div>
+
+    <p>What it does not cover is income replacement. It does not cover the mortgage for the next 20 years. It does not cover childcare costs when a second income suddenly becomes the only income. It does not cover college. It does not replace what a primary earner actually provides to a household over a lifetime.</p>
+
+    <div class="callout">
+      <p>For most families, the gap between what employer coverage provides and what a household actually needs is significant — and <strong>most families have never done that math.</strong></p>
+    </div>
+
+    <h2>Why This Gap Hits Hardest in Single-Income Households</h2>
+
+    <p>When a primary earner is lost, the financial disruption is immediate:</p>
+
+    <div class="diagnostic">
+      <p class="diagnostic-label">Immediate Financial Exposure</p>
+      <ul>
+        <li>Housing — mortgage or rent payments don't pause for grief</li>
+        <li>Childcare — costs that were offset by dual income now fall entirely on one person</li>
+        <li>Daily expenses — groceries, utilities, transportation, healthcare</li>
+        <li>Long-term stability — retirement savings, college funding, and financial goals built around two incomes</li>
+      </ul>
+    </div>
+
+    <p>Two times salary doesn't address any of this beyond the first few months. And in high cost-of-living states like California, it covers even less.</p>
+
+    <h2>The Three Life Insurance Problems Most Families Have</h2>
+
+    <p>Across the country, households fall into one of three categories — and all three represent real financial risk:</p>
+
+    <div class="scenario-card">
+      <p class="scenario-label">Problem One</p>
+      <h3>Uninsured</h3>
+      <p>No coverage at all. Often younger families, self-employed individuals, or people who have simply never prioritized it. The assumption is that it can wait — until it can't.</p>
+    </div>
+
+    <div class="scenario-card">
+      <p class="scenario-label">Problem Two</p>
+      <h3>Underinsured</h3>
+      <p>Coverage exists, but not nearly enough. Employer policies that haven't kept pace with income growth, family size, or financial obligations. A $250,000 policy on a household with a $500,000 mortgage and two children is underinsurance, not protection.</p>
+    </div>
+
+    <div class="scenario-card">
+      <p class="scenario-label">Problem Three — The Most Common</p>
+      <h3>Solely Reliant on Employer Coverage</h3>
+      <p>Workplace policies end when employment ends — through job loss, career change, or retirement. And they typically can't be converted to individual coverage at the same rate. The coverage that felt permanent is often temporary.</p>
+    </div>
+
+    <h2>How Much Life Insurance Does a Family Actually Need?</h2>
+
+    <p>A commonly used starting point is ten to twelve times your annual income — enough to replace earnings, cover outstanding debts, and provide long-term financial stability for dependents.</p>
+
+    <div class="math-block">
+      <p>A household earning $100,000 annually needs</p>
+      <div class="math-figure">$1,000,000 – $1,200,000</div>
+      <p class="math-note">Most employer policies provide $100,000 – $200,000.<br>The gap is real. The math is uncomfortable. Do it now.</p>
+    </div>
+
+    <p>The good news: for many healthy adults, $1 million in term life insurance costs around $50 to $100 per month. The gap between what most families have and what they actually need is often closable for less than a daily coffee.</p>
+
+  </div>
+
+  <div class="faq-block">
+    <h2>Frequently Asked Questions: The Life Insurance Gap</h2>
+
+    <div class="faq-item">
+      <p class="faq-q">What happens to my life insurance if I leave my job?</p>
+      <p class="faq-a">In most cases, employer-provided life insurance ends when your employment ends. Some policies offer a conversion option, but typically at significantly higher premiums. This is one of the primary reasons relying solely on workplace coverage creates long-term risk.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">How do I calculate how much life insurance I actually need?</p>
+      <p class="faq-a">A common starting point is ten to twelve times your annual income, plus outstanding debts like a mortgage, plus anticipated future expenses like college funding and childcare. A proper needs analysis accounts for your specific household situation rather than applying a generic formula.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Is term life insurance or whole life insurance better for income replacement?</p>
+      <p class="faq-a">For pure income replacement and household protection, term life insurance is typically the most cost-effective solution — providing substantial coverage during the years your family depends on your income most. Whole life and permanent policies serve different purposes and are appropriate in different financial situations.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Can I have both employer life insurance and a personal policy?</p>
+      <p class="faq-a">Yes — and for most households with significant financial obligations, carrying both is the right approach. Employer coverage provides a baseline. A personal policy provides the protection that baseline was never designed to deliver.</p>
+    </div>
+  </div>
+
+  <div class="article-cta">
+    <h2>Understand Your Life Insurance Gap —<br><em>Starting With What You Actually Have</em></h2>
+    <p>Most families are surprised by what a proper needs analysis reveals. All of them are better off knowing.</p>
+    <a href="index.html#contact" class="btn-primary">Start the Conversation &rarr;</a>
+  </div>
+
+  <p class="disclaimer">Rexford Insurance Solutions &mdash; Education First. Insurance Second. &nbsp;|&nbsp; California &nbsp;|&nbsp; Lic. 6017874. This article is for general informational purposes only and does not constitute legal, tax, or insurance advice. Coverage terms and costs vary by individual health, age, and insurer.</p>
+
+</div>
+
+<footer>
+  <a href="index.html" class="logo" style="color: var(--warm-white);">Rexford <span>Insurance</span></a>
+  <p>Rexford Insurance Solutions &nbsp;|&nbsp; California &nbsp;|&nbsp; Lic. 6017874</p>
+  <p style="color: rgba(253,250,245,0.2); font-size: 11px;">&copy; 2026 Rexford Insurance Solutions</p>
+</footer>
+
+</body>
+</html>
