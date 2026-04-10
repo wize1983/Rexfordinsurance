@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ILIT Planning for Foreign Nationals With California Assets — Rexford Insurance Solutions</title>
+  <meta name="description" content="Foreign nationals owning California real estate face significant U.S. estate tax exposure at death — with a much lower exemption than U.S. citizens. A properly structured ILIT provides the liquidity to handle it without forcing a property sale.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0D1B2A;
+      --gold: #C9A84C;
+      --gold-light: #E8C97A;
+      --cream: #F5F0E8;
+      --warm-white: #FDFAF5;
+      --gray: #6B7280;
+      --light-gray: #E8E4DC;
+      --dark-gold: #A07830;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--warm-white); color: var(--navy); overflow-x: hidden; font-size: 18px; }
+
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      padding: 20px 60px; display: flex; justify-content: space-between; align-items: center;
+      background: rgba(253,250,245,0.95); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; letter-spacing: 0.05em; color: var(--navy); text-decoration: none; }
+    .logo span { color: var(--gold); }
+    nav ul { list-style: none; display: flex; gap: 40px; align-items: center; }
+    nav ul a { text-decoration: none; color: var(--navy); font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.3s; }
+    nav ul a:hover { color: var(--gold); }
+    .nav-cta { background: var(--navy); color: var(--warm-white) !important; padding: 10px 24px; border-radius: 2px; transition: background 0.3s !important; }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--navy) !important; }
+
+    .hero {
+      background: var(--navy); padding: 160px 60px 100px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.05) 0%, transparent 50%);
+    }
+    .hero-inner { position: relative; max-width: 800px; margin: 0 auto; }
+    .breadcrumb { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(201,168,76,0.7); margin-bottom: 28px; }
+    .breadcrumb a { color: rgba(201,168,76,0.7); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 62px); font-weight: 300; color: var(--warm-white); line-height: 1.15; margin-bottom: 28px; }
+    .hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero-meta { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+    .hero-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,168,76,0.3); padding: 6px 14px; }
+
+    .article-wrap { max-width: 740px; margin: 0 auto; padding: 80px 60px 100px; }
+
+    .lede { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 2.5vw, 26px); font-weight: 300; font-style: italic; line-height: 1.7; color: var(--navy); border-left: 3px solid var(--gold); padding-left: 28px; margin-bottom: 56px; }
+
+    .body h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 34px); font-weight: 400; color: var(--navy); margin: 56px 0 20px; line-height: 1.25; }
+    .body p { font-size: 17px; font-weight: 300; line-height: 1.9; color: #2C3E50; margin-bottom: 24px; }
+
+    .callout {
+      background: var(--cream); border-left: 4px solid var(--gold);
+      padding: 32px 36px; margin: 48px 0;
+    }
+    .callout p { font-size: 16px; font-weight: 300; line-height: 1.85; color: var(--navy); margin: 0; }
+    .callout p + p { margin-top: 14px; }
+    .callout strong { font-weight: 500; }
+
+    .diagnostic {
+      border: 1px solid var(--light-gray); padding: 40px; margin: 48px 0;
+      background: var(--warm-white);
+    }
+    .diagnostic-label {
+      font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 20px;
+    }
+    .diagnostic ul { list-style: none; padding: 0; }
+    .diagnostic ul li {
+      font-size: 16px; font-weight: 300; color: var(--navy);
+      padding: 12px 0; border-bottom: 1px solid var(--light-gray);
+      display: flex; align-items: flex-start; gap: 14px; line-height: 1.6;
+    }
+    .diagnostic ul li:last-child { border-bottom: none; }
+    .diagnostic ul li::before { content: '→'; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+
+    .scenario-card {
+      border: 1px solid var(--light-gray); padding: 36px; margin: 28px 0;
+      position: relative; overflow: hidden;
+    }
+    .scenario-card::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 3px; height: 100%; background: var(--gold);
+    }
+    .scenario-label { font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .scenario-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--navy); margin-bottom: 12px; }
+    .scenario-card p { font-size: 16px; font-weight: 300; line-height: 1.85; color: #4A5568; margin: 0; }
+    .scenario-card p + p { margin-top: 12px; }
+
+    .math-block {
+      background: var(--navy); color: var(--warm-white); padding: 48px;
+      margin: 48px 0; text-align: center; position: relative; overflow: hidden;
+    }
+    .math-block::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.08) 0%, transparent 70%);
+    }
+    .math-block .math-label { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(201,168,76,0.7); margin-bottom: 16px; position: relative; }
+    .math-block .math-figure { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 5vw, 52px); font-weight: 300; color: var(--gold-light); position: relative; margin-bottom: 12px; }
+    .math-block .math-note { font-size: 15px; font-weight: 300; color: rgba(253,250,245,0.65); position: relative; line-height: 1.7; }
+
+    .three-benefits { margin: 48px 0; }
+    .benefit-item { display: flex; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--light-gray); align-items: flex-start; }
+    .benefit-item:first-child { border-top: 1px solid var(--light-gray); }
+    .benefit-number { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; color: var(--gold); flex-shrink: 0; line-height: 1; padding-top: 4px; min-width: 32px; }
+    .benefit-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+    .benefit-content p { font-size: 16px; font-weight: 300; line-height: 1.85; color: #4A5568; margin: 0; }
+
+    .faq-block { margin: 56px 0; }
+    .faq-block h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 34px); font-weight: 400; color: var(--navy); margin-bottom: 32px; }
+    .faq-item { border-bottom: 1px solid var(--light-gray); padding: 28px 0; }
+    .faq-item:first-of-type { border-top: 1px solid var(--light-gray); }
+    .faq-q { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--navy); margin-bottom: 12px; }
+    .faq-a { font-size: 16px; font-weight: 300; line-height: 1.85; color: #4A5568; }
+
+    .article-cta {
+      background: var(--navy); padding: 56px; margin: 64px 0 0; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .article-cta::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.08) 0%, transparent 70%);
+    }
+    .article-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 3.5vw, 40px); font-weight: 300; color: var(--warm-white); margin-bottom: 16px; position: relative; }
+    .article-cta h2 em { font-style: italic; color: var(--gold-light); }
+    .article-cta p { font-size: 15px; font-weight: 300; color: rgba(253,250,245,0.6); line-height: 1.8; position: relative; max-width: 500px; margin: 0 auto 36px; }
+    .btn-primary {
+      display: inline-block; background: var(--gold); color: var(--navy);
+      padding: 16px 40px; font-size: 12px; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; text-decoration: none; transition: all 0.3s;
+      font-family: 'DM Sans', sans-serif; position: relative;
+    }
+    .btn-primary:hover { background: var(--gold-light); }
+
+    .disclaimer { font-size: 12px; font-weight: 300; color: var(--gray); line-height: 1.7; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--light-gray); }
+
+    footer {
+      background: #070E17; padding: 40px 60px;
+      display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid rgba(201,168,76,0.15);
+    }
+    footer p { font-size: 12px; color: rgba(253,250,245,0.3); letter-spacing: 0.05em; }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      nav ul { display: none; }
+      .hero { padding: 120px 24px 60px; }
+      .article-wrap { padding: 48px 24px 60px; }
+      .article-cta { padding: 48px 24px; }
+      .math-block { padding: 40px 24px; }
+      .benefit-item { flex-direction: column; gap: 12px; }
+      footer { flex-direction: column; gap: 12px; text-align: center; padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Rexford <span>Insurance</span></a>
+  <ul>
+    <li><a href="index.html#legacy">Legacy Planning</a></li>
+    <li><a href="index.html#risk">Risk Advisory</a></li>
+    <li><a href="insights.html">Insights</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="breadcrumb"><a href="insights.html">Insights</a> &nbsp;/&nbsp; Legacy Planning</p>
+    <h1>ILIT Planning for Foreign Nationals<br><em>With California Assets</em></h1>
+    <div class="hero-meta">
+      <span class="hero-tag">Legacy Planning</span>
+      <span class="hero-tag">California</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-wrap">
+
+  <p class="lede">
+    California is one of the most common destinations in the world for foreign nationals to own U.S. assets — real estate, commercial property, operating businesses, investment holdings. What's far less understood is what happens to those assets at death. U.S. estate tax and California probate rules apply regardless of where the owner lives.
+  </p>
+
+  <div class="body">
+
+    <h2>Why U.S. Estate Tax Hits Foreign Nationals Differently</h2>
+
+    <p>For U.S. estate tax purposes, a foreign national — also called a nonresident alien — is someone who is not a U.S. citizen and is not domiciled in the United States. This distinction matters enormously at death.</p>
+
+    <p>While California does not impose a separate state estate tax, federal U.S. estate tax can still apply to U.S.-situs assets owned by foreign nationals at death, including:</p>
+
+    <div class="diagnostic">
+      <p class="diagnostic-label">U.S.-Situs Assets Subject to Estate Tax</p>
+      <ul>
+        <li>California residential and commercial real estate</li>
+        <li>Shares of U.S. corporations</li>
+        <li>Certain U.S. business interests</li>
+      </ul>
+    </div>
+
+    <div class="callout">
+      <p>The federal estate tax exemption for foreign nationals is <strong>significantly lower</strong> than for U.S. citizens — meaning a much larger portion of a California asset's value can be exposed to estate tax at death.</p>
+      <p>And unlike capital gains tax, which is triggered at sale, U.S. estate tax is triggered at death. <strong>There is no planning window after the fact.</strong></p>
+    </div>
+
+    <h2>The California Probate Problem: It's Not About Asset Value — It's About Timing</h2>
+
+    <p>California probate is widely known for being formal, time-consuming, and court-driven. For a U.S. citizen, this is inconvenient. For a foreign national, it creates a compounding problem.</p>
+
+    <p>When a foreign national dies owning California assets:</p>
+
+    <div class="diagnostic">
+      <p class="diagnostic-label">The Probate Timeline Problem</p>
+      <ul>
+        <li>Probate may restrict access to the property during the court process</li>
+        <li>Court approval can delay sales or transfers for months — sometimes longer</li>
+        <li>Federal estate taxes may still be due within nine months of death</li>
+      </ul>
+    </div>
+
+    <p>The challenge facing most families isn't the value of the asset. It's having liquid cash available to meet tax obligations while probate runs its course in the background — without being forced to sell a property the family intended to keep.</p>
+
+    <h2>What Is an ILIT and Why Foreign Nationals Use It for California Planning</h2>
+
+    <p>An Irrevocable Life Insurance Trust — commonly called an ILIT — is a trust that owns a life insurance policy rather than the individual owning it personally.</p>
+
+    <p>When structured correctly, an ILIT can:</p>
+
+    <div class="diagnostic">
+      <p class="diagnostic-label">What a Properly Structured ILIT Provides</p>
+      <ul>
+        <li>Keep life insurance proceeds outside the taxable estate</li>
+        <li>Pay proceeds outside of California probate — directly to the trust, immediately at death</li>
+        <li>Provide liquid cash precisely when estate taxes and expenses are due</li>
+      </ul>
+    </div>
+
+    <p>An ILIT does not eliminate U.S. estate tax. What it does is ensure there is cash available to handle it — without disrupting long-term assets the family intends to keep.</p>
+
+    <h2>A Real-World California Example</h2>
+
+    <div class="scenario-card">
+      <p class="scenario-label">Case Study</p>
+      <h3>Maria's $6M California Property</h3>
+      <p>Maria is a foreign national — not a U.S. citizen, not domiciled in the United States. She owns a $6,000,000 California residential property. Her family intends to keep it long-term. She understands that U.S. estate tax at death could reach up to 40%.</p>
+    </div>
+
+    <div class="math-block">
+      <p class="math-label">Potential U.S. Estate Tax Exposure</p>
+      <div class="math-figure">Up to $2,400,000</div>
+      <p class="math-note">Without planning: sell the property they intended to keep, or find $2.4M in liquid cash while navigating California probate. With a properly structured ILIT: the death benefit pays directly to the trust — outside probate, outside the taxable estate — immediately available.</p>
+    </div>
+
+    <p>With ILIT proceeds in place, the trust can pay estate taxes and expenses without forcing a property sale, lend funds to the estate, or purchase assets from it — preserving the California real estate for the next generation as intended.</p>
+
+    <h2>Three Core Benefits of ILIT Planning for California Foreign Nationals</h2>
+
+    <div class="three-benefits">
+      <div class="benefit-item">
+        <div class="benefit-number">1</div>
+        <div class="benefit-content">
+          <h3>Liquidity Outside California Probate</h3>
+          <p>Life insurance owned by an ILIT pays directly to the trust, not the estate. Cash is available immediately — while California probate runs in the background on its own timeline.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-number">2</div>
+        <div class="benefit-content">
+          <h3>Protection Against Forced Sale of California Real Estate</h3>
+          <p>The ILIT can lend funds to the estate or purchase assets from it — allowing estate taxes and expenses to be paid without rushing the sale of California property under unfavorable conditions.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-number">3</div>
+        <div class="benefit-content">
+          <h3>Keeps Insurance From Increasing Estate Tax Exposure</h3>
+          <p>If life insurance is owned personally, the death benefit is often included in the taxable estate — increasing the very problem it was meant to solve. ILIT ownership keeps insurance proceeds from adding to the estate tax burden.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>How ILITs Are Funded for Foreign Nationals</h2>
+
+    <p>ILITs are typically funded through annual gifts to the trust, which the trustee then uses to pay insurance premiums. Under current rules, gifts within annual exclusion limits can generally be made without paying gift tax or filing a gift tax return. Gifts above that threshold must be reported to the IRS and may reduce the lifetime exemption.</p>
+
+    <p>For foreign nationals, gifting strategies must always be coordinated with home-country tax rules — as cross-border gift and inheritance tax treatment varies significantly by jurisdiction.</p>
+
+    <h2>Why Structure Matters: This Is Not a Template Solution</h2>
+
+    <p>An ILIT for a foreign national with California assets requires coordination across multiple dimensions:</p>
+
+    <div class="diagnostic">
+      <p class="diagnostic-label">Critical Coordination Points</p>
+      <ul>
+        <li>Trust structure and governing law — which jurisdiction governs the trust and how it interacts with California law</li>
+        <li>Policy ownership and control — how the policy is held and what rights the insured retains</li>
+        <li>Cross-border tax treatment — how the structure interacts with home-country tax obligations</li>
+        <li>Funding mechanics and currency movement — how premiums are paid and from where</li>
+      </ul>
+    </div>
+
+    <p>Errors in any of these areas can undermine the planning entirely. Qualified California estate planning counsel and international tax advisors are essential.</p>
+
+  </div>
+
+  <div class="faq-block">
+    <h2>Frequently Asked Questions: ILITs and Foreign Nationals With California Assets</h2>
+
+    <div class="faq-item">
+      <p class="faq-q">Do foreign nationals pay U.S. estate tax on California real estate?</p>
+      <p class="faq-a">Yes. U.S.-situs assets — including California real estate — are subject to federal U.S. estate tax at the death of a foreign national, regardless of where the owner lived. The exemption available to foreign nationals is significantly lower than the exemption available to U.S. citizens.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Does California have its own estate tax for foreign nationals?</p>
+      <p class="faq-a">No. California does not impose a separate state estate tax. However, federal U.S. estate tax still applies to California assets owned by foreign nationals at death.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">What is the difference between an ILIT and personally owned life insurance for estate planning?</p>
+      <p class="faq-a">When life insurance is owned personally, the death benefit is typically included in the taxable estate — potentially increasing estate tax exposure. An ILIT owns the policy instead, keeping proceeds outside the taxable estate and outside California probate, and providing immediate liquidity at death.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">How long does California probate take for a foreign national's estate?</p>
+      <p class="faq-a">California probate timelines vary based on estate complexity, court schedules, and whether assets are contested. For estates involving foreign nationals, the process can take one to two years or longer — during which access to property may be restricted. This is precisely why liquidity planning matters.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Can a foreign national set up an ILIT in California?</p>
+      <p class="faq-a">Yes, though the structure requires careful coordination between California estate planning attorneys, U.S. tax advisors, and international tax counsel familiar with the owner's home jurisdiction. Rexford Insurance Solutions works alongside these advisors to ensure the insurance component is properly integrated.</p>
+    </div>
+  </div>
+
+  <div class="article-cta">
+    <h2>International California Planning —<br><em>Starting With a Confidential Conversation</em></h2>
+    <p>We work alongside California estate planning attorneys, U.S. and international tax advisors, and family offices to ensure the insurance component of an estate plan supports California probate realities and provides liquidity at the right moment.</p>
+    <a href="index.html#contact" class="btn-primary">Start the Conversation &rarr;</a>
+  </div>
+
+  <p class="disclaimer">Rexford Insurance Solutions &mdash; Education First. Insurance Second. &nbsp;|&nbsp; California &nbsp;|&nbsp; Lic. 6017874. This article is for general informational and educational purposes only. It does not constitute legal, tax, or financial advice. Estate tax rules, exemption amounts, and planning strategies are subject to change. Consult qualified legal, tax, and financial advisors before implementing any estate planning strategy.</p>
+
+</div>
+
+<footer>
+  <a href="index.html" class="logo" style="color: var(--warm-white);">Rexford <span>Insurance</span></a>
+  <p>Rexford Insurance Solutions &nbsp;|&nbsp; California &nbsp;|&nbsp; Lic. 6017874</p>
+  <p style="color: rgba(253,250,245,0.2); font-size: 11px;">&copy; 2026 Rexford Insurance Solutions</p>
+</footer>
+
+</body>
+</html>
