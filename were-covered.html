@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>"We're Covered." Are You Sure About That? — Rexford Insurance Solutions</title>
+  <meta name="description" content="Having insurance and having structure are not the same thing. The gap between what's insured and what's actually in place is where most claims get complicated.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0D1B2A;
+      --gold: #C9A84C;
+      --gold-light: #E8C97A;
+      --cream: #F5F0E8;
+      --warm-white: #FDFAF5;
+      --gray: #6B7280;
+      --light-gray: #E8E4DC;
+      --dark-gold: #A07830;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--warm-white); color: var(--navy); overflow-x: hidden; font-size: 18px; }
+
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      padding: 20px 60px; display: flex; justify-content: space-between; align-items: center;
+      background: rgba(253,250,245,0.95); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; letter-spacing: 0.05em; color: var(--navy); text-decoration: none; }
+    .logo span { color: var(--gold); }
+    nav ul { list-style: none; display: flex; gap: 40px; align-items: center; }
+    nav ul a { text-decoration: none; color: var(--navy); font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.3s; }
+    nav ul a:hover { color: var(--gold); }
+    .nav-cta { background: var(--navy); color: var(--warm-white) !important; padding: 10px 24px; border-radius: 2px; transition: background 0.3s !important; }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--navy) !important; }
+
+    .hero {
+      background: var(--navy); padding: 160px 60px 100px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.05) 0%, transparent 50%);
+    }
+    .hero-inner { position: relative; max-width: 800px; margin: 0 auto; }
+    .breadcrumb { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(201,168,76,0.7); margin-bottom: 28px; }
+    .breadcrumb a { color: rgba(201,168,76,0.7); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 62px); font-weight: 300; color: var(--warm-white); line-height: 1.15; margin-bottom: 28px; }
+    .hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero-meta { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+    .hero-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,168,76,0.3); padding: 6px 14px; }
+
+    .article-wrap { max-width: 740px; margin: 0 auto; padding: 80px 60px 100px; }
+
+    .lede { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 2.5vw, 26px); font-weight: 300; font-style: italic; line-height: 1.7; color: var(--navy); border-left: 3px solid var(--gold); padding-left: 28px; margin-bottom: 56px; }
+
+    .body h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 34px); font-weight: 400; color: var(--navy); margin: 56px 0 20px; line-height: 1.25; }
+    .body p { font-size: 17px; font-weight: 300; line-height: 1.9; color: #2C3E50; margin-bottom: 24px; }
+
+    .callout {
+      background: var(--cream); border-left: 4px solid var(--gold);
+      padding: 32px 36px; margin: 48px 0;
+    }
+    .callout p { font-size: 16px; font-weight: 300; line-height: 1.85; color: var(--navy); margin: 0; }
+    .callout strong { font-weight: 500; color: var(--navy); }
+
+    .diagnostic {
+      border: 1px solid var(--light-gray); padding: 40px; margin: 48px 0;
+      background: var(--warm-white);
+    }
+    .diagnostic-label {
+      font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 20px;
+    }
+    .diagnostic ul { list-style: none; padding: 0; }
+    .diagnostic ul li {
+      font-size: 16px; font-weight: 300; color: var(--navy);
+      padding: 12px 0; border-bottom: 1px solid var(--light-gray);
+      display: flex; align-items: flex-start; gap: 14px; line-height: 1.6;
+    }
+    .diagnostic ul li:last-child { border-bottom: none; }
+    .diagnostic ul li::before { content: '→'; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+
+    .scenario-card {
+      border: 1px solid var(--light-gray); padding: 36px; margin: 28px 0;
+      position: relative; overflow: hidden;
+    }
+    .scenario-card::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 3px; height: 100%; background: var(--gold);
+    }
+    .scenario-label { font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .scenario-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--navy); margin-bottom: 12px; }
+    .scenario-card p { font-size: 16px; font-weight: 300; line-height: 1.85; color: #4A5568; margin: 0; }
+
+    .faq-block { margin: 56px 0; }
+    .faq-block h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 34px); font-weight: 400; color: var(--navy); margin-bottom: 32px; }
+    .faq-item { border-bottom: 1px solid var(--light-gray); padding: 28px 0; }
+    .faq-item:first-of-type { border-top: 1px solid var(--light-gray); }
+    .faq-q { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--navy); margin-bottom: 12px; }
+    .faq-a { font-size: 16px; font-weight: 300; line-height: 1.85; color: #4A5568; }
+
+    .article-cta {
+      background: var(--navy); padding: 56px; margin: 64px 0 0; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .article-cta::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.08) 0%, transparent 70%);
+    }
+    .article-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 3.5vw, 40px); font-weight: 300; color: var(--warm-white); margin-bottom: 16px; position: relative; }
+    .article-cta h2 em { font-style: italic; color: var(--gold-light); }
+    .article-cta p { font-size: 15px; font-weight: 300; color: rgba(253,250,245,0.6); margin-bottom: 36px; line-height: 1.8; position: relative; max-width: 480px; margin-left: auto; margin-right: auto; margin-bottom: 36px; }
+    .btn-primary {
+      display: inline-block; background: var(--gold); color: var(--navy);
+      padding: 16px 40px; font-size: 12px; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; text-decoration: none; transition: all 0.3s;
+      font-family: 'DM Sans', sans-serif; position: relative;
+    }
+    .btn-primary:hover { background: var(--gold-light); }
+
+    .disclaimer { font-size: 12px; font-weight: 300; color: var(--gray); line-height: 1.7; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--light-gray); }
+
+    footer {
+      background: #070E17; padding: 40px 60px;
+      display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid rgba(201,168,76,0.15);
+    }
+    footer p { font-size: 12px; color: rgba(253,250,245,0.3); letter-spacing: 0.05em; }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      nav ul { display: none; }
+      .hero { padding: 120px 24px 60px; }
+      .article-wrap { padding: 48px 24px 60px; }
+      .article-cta { padding: 48px 24px; }
+      footer { flex-direction: column; gap: 12px; text-align: center; padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Rexford <span>Insurance</span></a>
+  <ul>
+    <li><a href="index.html#legacy">Legacy Planning</a></li>
+    <li><a href="index.html#risk">Risk Advisory</a></li>
+    <li><a href="insights.html">Insights</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="breadcrumb"><a href="insights.html">Insights</a> &nbsp;/&nbsp; Risk Advisory</p>
+    <h1>"We're Covered."<br><em>Are You Sure About That?</em></h1>
+    <div class="hero-meta">
+      <span class="hero-tag">Risk Advisory</span>
+      <span class="hero-tag">Business Owners</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-wrap">
+
+  <p class="lede">
+    A business owner told me recently: "We've got workers' comp, EPLI, GL — we're good." He wasn't wrong. The policies were in place. The limits were reasonable. On paper, the business looked covered. But when we looked under the hood, a different picture emerged.
+  </p>
+
+  <div class="body">
+
+    <h2>Having Insurance and Having Structure Are Not the Same Thing</h2>
+
+    <p>No documented employee training. No compliance education. No signed acknowledgments. No structured onboarding process.</p>
+
+    <p>Nothing intentional. Management was busy. Growth was happening. Things slip.</p>
+
+    <p>It happens more than most business owners realize — and it's one of the most expensive assumptions in risk management.</p>
+
+    <div class="callout">
+      <p><strong>Here's why it matters:</strong> when a claim comes in, insurers don't just ask whether you had a policy. They ask whether you had procedures. Whether employees were trained. Whether acknowledgments were signed. Whether anyone could prove that proper protocols were followed.</p>
+      <p style="margin-top: 16px;">If the answer is no — your coverage may respond very differently than you expect.</p>
+    </div>
+
+    <h2>The Gap Between Coverage and Protection</h2>
+
+    <p>Workers' compensation, employment practices liability, and general liability are essential. But they're designed to respond <em>after</em> something goes wrong. They are not a substitute for the internal structure that prevents things from going wrong in the first place.</p>
+
+    <p>The businesses that fare best after a claim aren't just the ones with the right policies. They're the ones that can demonstrate:</p>
+
+    <div class="diagnostic">
+      <p class="diagnostic-label">What Insurers Actually Look For</p>
+      <ul>
+        <li>Documented employee training — and records proving it happened</li>
+        <li>Signed acknowledgments — showing employees understood policies and procedures</li>
+        <li>Structured onboarding — so every new hire enters with the same baseline</li>
+        <li>Compliance education — particularly around wage and hour, harassment, and workplace safety</li>
+        <li>Intentional management of risk — not just assumption that coverage handles it</li>
+      </ul>
+    </div>
+
+    <p>That gap — between what's insured and what's actually structured — is where most claims get complicated and most businesses get surprised.</p>
+
+    <h2>What an Independent Risk Review Actually Looks Like</h2>
+
+    <p>Most business owners have never had someone look at their risk posture independently. Not their broker checking in at renewal. Not a vendor with something to sell. An honest, outside set of eyes on what's actually in place versus what should be.</p>
+
+    <p>That conversation usually surfaces things that are simple to fix — and occasionally surfaces things that needed to be fixed a long time ago.</p>
+
+    <p>Either way, it's a better outcome than saying "I thought it was done" after a claim comes through.</p>
+
+  </div>
+
+  <div class="faq-block">
+    <h2>Frequently Asked Questions: Business Insurance and Risk Structure</h2>
+
+    <div class="faq-item">
+      <p class="faq-q">What is EPLI insurance and what does it cover?</p>
+      <p class="faq-a">Employment Practices Liability Insurance covers businesses against claims made by employees alleging wrongful termination, harassment, discrimination, or other employment-related violations. However, EPLI claims are significantly harder to defend without documented training, policies, and signed acknowledgments.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Does having workers' comp mean my business is fully protected?</p>
+      <p class="faq-a">Workers' compensation covers employee injuries on the job — but it doesn't protect against employment practices claims, management liability, or gaps in your operational structure. Coverage and protection are not the same thing.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">What should be included in a business risk review?</p>
+      <p class="faq-a">A thorough risk review looks beyond policy documents — examining employee training records, onboarding procedures, compliance documentation, signed acknowledgments, vendor contracts, and operational protocols to identify gaps between what's insured and what's actually structured.</p>
+    </div>
+  </div>
+
+  <div class="article-cta">
+    <h2>Independent Risk Reviews for<br><em>California Business Owners</em></h2>
+    <p>Not a sales pitch. Not a renewal call. An honest, outside review of what's actually in place — and what's missing.</p>
+    <a href="index.html#contact" class="btn-primary">Request Your Free Review &rarr;</a>
+  </div>
+
+  <p class="disclaimer">Rexford Insurance Solutions &mdash; Education First. Insurance Second. &nbsp;|&nbsp; California &nbsp;|&nbsp; Lic. 6017874. This article is for general informational purposes only and does not constitute legal, compliance, or insurance advice. Coverage terms vary by policy and insurer.</p>
+
+</div>
+
+<footer>
+  <a href="index.html" class="logo" style="color: var(--warm-white);">Rexford <span>Insurance</span></a>
+  <p>Rexford Insurance Solutions &nbsp;|&nbsp; California &nbsp;|&nbsp; Lic. 6017874</p>
+  <p style="color: rgba(253,250,245,0.2); font-size: 11px;">&copy; 2026 Rexford Insurance Solutions</p>
+</footer>
+
+</body>
+</html>
