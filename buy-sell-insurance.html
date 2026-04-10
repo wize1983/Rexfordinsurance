@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy-Sell Insurance for Business Owners: How to Fund a Buyout Before It Becomes a Crisis — Rexford Insurance Solutions</title>
+  <meta name="description" content="When a co-owner dies without a funded buy-sell plan, the surviving owner, the family, and the business all need different things — at the same time. Here's how buy-sell insurance prevents that collision.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0D1B2A;
+      --gold: #C9A84C;
+      --gold-light: #E8C97A;
+      --cream: #F5F0E8;
+      --warm-white: #FDFAF5;
+      --gray: #6B7280;
+      --light-gray: #E8E4DC;
+      --dark-gold: #A07830;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--warm-white); color: var(--navy); overflow-x: hidden; font-size: 18px; }
+
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      padding: 20px 60px; display: flex; justify-content: space-between; align-items: center;
+      background: rgba(253,250,245,0.95); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; letter-spacing: 0.05em; color: var(--navy); text-decoration: none; }
+    .logo span { color: var(--gold); }
+    nav ul { list-style: none; display: flex; gap: 40px; align-items: center; }
+    nav ul a { text-decoration: none; color: var(--navy); font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.3s; }
+    nav ul a:hover { color: var(--gold); }
+    .nav-cta { background: var(--navy); color: var(--warm-white) !important; padding: 10px 24px; border-radius: 2px; transition: background 0.3s !important; }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--navy) !important; }
+
+    .hero {
+      background: var(--navy); padding: 160px 60px 100px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.05) 0%, transparent 50%);
+    }
+    .hero-inner { position: relative; max-width: 800px; margin: 0 auto; }
+    .breadcrumb { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(201,168,76,0.7); margin-bottom: 28px; }
+    .breadcrumb a { color: rgba(201,168,76,0.7); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 62px); font-weight: 300; color: var(--warm-white); line-height: 1.15; margin-bottom: 28px; }
+    .hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero-meta { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+    .hero-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,168,76,0.3); padding: 6px 14px; }
+
+    .article-wrap { max-width: 740px; margin: 0 auto; padding: 80px 60px 100px; }
+
+    .lede { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 2.5vw, 26px); font-weight: 300; font-style: italic; line-height: 1.7; color: var(--navy); border-left: 3px solid var(--gold); padding-left: 28px; margin-bottom: 56px; }
+
+    .body h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 34px); font-weight: 400; color: var(--navy); margin: 56px 0 20px; line-height: 1.25; }
+    .body p { font-size: 17px; font-weight: 300; line-height: 1.9; color: #2C3E50; margin-bottom: 24px; }
+
+    .callout {
+      background: var(--cream); border-left: 4px solid var(--gold);
+      padding: 32px 36px; margin: 48px 0;
+    }
+    .callout p { font-size: 16px; font-weight: 300; line-height: 1.85; color: var(--navy); margin: 0; }
+    .callout p + p { margin-top: 14px; }
+    .callout strong { font-weight: 500; }
+
+    .diagnostic {
+      border: 1px solid var(--light-gray); padding: 40px; margin: 48px 0;
+      background: var(--warm-white);
+    }
+    .diagnostic-label {
+      font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 20px;
+    }
+    .diagnostic ul { list-style: none; padding: 0; }
+    .diagnostic ul li {
+      font-size: 16px; font-weight: 300; color: var(--navy);
+      padding: 12px 0; border-bottom: 1px solid var(--light-gray);
+      display: flex; align-items: flex-start; gap: 14px; line-height: 1.6;
+    }
+    .diagnostic ul li:last-child { border-bottom: none; }
+    .diagnostic ul li::before { content: '→'; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+
+    .scenario-card {
+      border: 1px solid var(--light-gray); padding: 36px; margin: 28px 0;
+      position: relative; overflow: hidden;
+    }
+    .scenario-card::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 3px; height: 100%; background: var(--gold);
+    }
+    .scenario-label { font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .scenario-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--navy); margin-bottom: 12px; }
+    .scenario-card p { font-size: 16px; font-weight: 300; line-height: 1.85; color: #4A5568; margin: 0; }
+    .scenario-card p + p { margin-top: 12px; }
+
+    .compare-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+      background: var(--light-gray); border: 1px solid var(--light-gray); margin: 48px 0;
+    }
+    .compare-cell { background: var(--warm-white); padding: 32px 28px; }
+    .compare-cell.header { background: var(--navy); }
+    .compare-cell.header p { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin: 0; }
+    .compare-cell h3 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--navy); margin-bottom: 12px; }
+    .compare-cell p { font-size: 15px; font-weight: 300; line-height: 1.8; color: #4A5568; margin: 0; }
+    .compare-cell ul { list-style: none; padding: 0; margin-top: 12px; }
+    .compare-cell ul li { font-size: 15px; font-weight: 300; color: #4A5568; padding: 6px 0; border-bottom: 1px solid var(--light-gray); display: flex; gap: 10px; align-items: flex-start; line-height: 1.5; }
+    .compare-cell ul li:last-child { border-bottom: none; }
+    .compare-cell ul li::before { content: '·'; color: var(--gold); font-size: 20px; flex-shrink: 0; line-height: 1.2; }
+
+    .entity-blocks { margin: 48px 0; }
+    .entity-block { padding: 32px 0; border-bottom: 1px solid var(--light-gray); }
+    .entity-block:first-child { border-top: 1px solid var(--light-gray); }
+    .entity-block h3 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
+    .entity-block p { font-size: 16px; font-weight: 300; line-height: 1.85; color: #4A5568; margin: 0; }
+
+    .faq-block { margin: 56px 0; }
+    .faq-block h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 34px); font-weight: 400; color: var(--navy); margin-bottom: 32px; }
+    .faq-item { border-bottom: 1px solid var(--light-gray); padding: 28px 0; }
+    .faq-item:first-of-type { border-top: 1px solid var(--light-gray); }
+    .faq-q { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--navy); margin-bottom: 12px; }
+    .faq-a { font-size: 16px; font-weight: 300; line-height: 1.85; color: #4A5568; }
+
+    .article-cta {
+      background: var(--navy); padding: 56px; margin: 64px 0 0; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .article-cta::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.08) 0%, transparent 70%);
+    }
+    .article-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 3.5vw, 40px); font-weight: 300; color: var(--warm-white); margin-bottom: 16px; position: relative; }
+    .article-cta h2 em { font-style: italic; color: var(--gold-light); }
+    .article-cta p { font-size: 15px; font-weight: 300; color: rgba(253,250,245,0.6); line-height: 1.8; position: relative; max-width: 500px; margin: 0 auto 36px; }
+    .btn-primary {
+      display: inline-block; background: var(--gold); color: var(--navy);
+      padding: 16px 40px; font-size: 12px; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; text-decoration: none; transition: all 0.3s;
+      font-family: 'DM Sans', sans-serif; position: relative;
+    }
+    .btn-primary:hover { background: var(--gold-light); }
+
+    .disclaimer { font-size: 12px; font-weight: 300; color: var(--gray); line-height: 1.7; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--light-gray); }
+
+    footer {
+      background: #070E17; padding: 40px 60px;
+      display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid rgba(201,168,76,0.15);
+    }
+    footer p { font-size: 12px; color: rgba(253,250,245,0.3); letter-spacing: 0.05em; }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      nav ul { display: none; }
+      .hero { padding: 120px 24px 60px; }
+      .article-wrap { padding: 48px 24px 60px; }
+      .article-cta { padding: 48px 24px; }
+      .compare-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 12px; text-align: center; padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Rexford <span>Insurance</span></a>
+  <ul>
+    <li><a href="index.html#legacy">Legacy Planning</a></li>
+    <li><a href="index.html#risk">Risk Advisory</a></li>
+    <li><a href="insights.html">Insights</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="breadcrumb"><a href="insights.html">Insights</a> &nbsp;/&nbsp; Legacy Planning</p>
+    <h1>Buy-Sell Insurance for Business Owners:<br><em>How to Fund a Buyout Before It Becomes a Crisis</em></h1>
+    <div class="hero-meta">
+      <span class="hero-tag">Legacy Planning</span>
+      <span class="hero-tag">Business Owners</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-wrap">
+
+  <p class="lede">
+    When a co-owner passes away and there is no funded plan for what happens next, the surviving owner wants control, the family wants cash, and the business needs stability — and all three needs are competing against each other at the worst possible time. That's exactly what buy-sell insurance is designed to prevent.
+  </p>
+
+  <div class="body">
+
+    <h2>What Happens to a Business When One Owner Dies Without a Plan</h2>
+
+    <p>When an owner passes away, their ownership interest doesn't disappear. It transfers to their estate — typically a spouse, children, or other heirs. Suddenly, three competing needs emerge simultaneously:</p>
+
+    <div class="diagnostic">
+      <p class="diagnostic-label">The Three-Way Collision</p>
+      <ul>
+        <li>The surviving owner wants operational control of the business they've built</li>
+        <li>The family needs liquidity — cash to replace the income the deceased owner provided</li>
+        <li>The business needs stability — employees, clients, and vendors need to see leadership intact</li>
+      </ul>
+    </div>
+
+    <p>Without a funded plan, the most common outcomes are a forced sale of the business, a prolonged legal dispute between surviving owners and the deceased's estate, or a family left holding an ownership interest in a business they don't want to run and can't easily sell.</p>
+
+    <div class="callout">
+      <p>None of these outcomes are inevitable. <strong>All of them are preventable</strong> with the right plan in place.</p>
+    </div>
+
+    <h2>What Is a Buy-Sell Agreement and How Does It Work?</h2>
+
+    <p>A buy-sell agreement is the written game plan for business ownership transition. A properly structured agreement addresses:</p>
+
+    <div class="diagnostic">
+      <p class="diagnostic-label">What a Buy-Sell Agreement Covers</p>
+      <ul>
+        <li>Who buys the ownership interest — the surviving owner, the business entity, or a third party</li>
+        <li>When the buyout happens — the triggering events that activate the agreement</li>
+        <li>How the business is valued — a pre-agreed valuation method that prevents disputes at transition</li>
+        <li>How the buyout is funded — the mechanism that actually produces the cash to complete the transaction</li>
+      </ul>
+    </div>
+
+    <div class="callout">
+      <p>The agreement is the plan. The insurance is what funds it.</p>
+      <p>A buy-sell agreement without funding is a plan that exists only on paper — and <strong>paper doesn't produce the cash</strong> a family needs or the liquidity a surviving owner requires.</p>
+    </div>
+
+    <h2>Why Personal Life Insurance Doesn't Solve the Buy-Sell Problem</h2>
+
+    <p>Many business owners already have life insurance and assume that coverage protects their business interests as well as their family. It doesn't.</p>
+
+    <p>Personal life insurance pays benefits to a spouse, children, or named personal beneficiaries. It does not create an obligation or mechanism for an ownership buyout. It does not prevent heirs from inheriting an ownership stake in a business they did not choose to own.</p>
+
+    <p>The result: a surviving owner may find themselves in business with a spouse or children who have no interest in the business, no operational role, and every incentive to extract value as quickly as possible — while the surviving owner has no funded mechanism to buy them out.</p>
+
+    <p>Buy-sell insurance is life insurance with a specific, defined job. It solves a specific, defined problem.</p>
+
+    <h2>How Buy-Sell Insurance Actually Works</h2>
+
+    <p>When a triggering event occurs — typically an owner's death — properly structured buy-sell insurance:</p>
+
+    <div class="diagnostic">
+      <p class="diagnostic-label">What the Insurance Delivers</p>
+      <ul>
+        <li>Provides immediate cash to fund the buyout without requiring the business to liquidate assets or take on debt</li>
+        <li>Funds the buyout at a pre-agreed value — not a distressed number negotiated under pressure</li>
+        <li>Pays the family in cash instead of leaving them with equity in a business they didn't plan to own</li>
+        <li>Keeps ownership with the surviving owner — clean, immediate, and without the legal disputes that arise when no funded plan exists</li>
+      </ul>
+    </div>
+
+    <h2>The Two Most Common Buy-Sell Insurance Structures</h2>
+
+    <div class="compare-grid">
+      <div class="compare-cell header"><p>Cross-Purchase Agreement</p></div>
+      <div class="compare-cell header"><p>Entity Purchase Agreement</p></div>
+      <div class="compare-cell">
+        <p>Each owner purchases a life insurance policy on the other owners. When one owner dies, the surviving owners use the insurance proceeds to buy the deceased owner's interest directly from the estate.</p>
+        <ul>
+          <li>Works well for businesses with a small number of owners</li>
+          <li>Surviving owners receive a stepped-up cost basis in purchased shares</li>
+          <li>Each owner holds and manages their own policies</li>
+        </ul>
+      </div>
+      <div class="compare-cell">
+        <p>The business entity itself owns life insurance policies on each owner. When an owner dies, the business uses the proceeds to purchase the deceased owner's interest, which is then retired or redistributed.</p>
+        <ul>
+          <li>Simplifies administration for businesses with multiple owners</li>
+          <li>Different tax implications — requires CPA review</li>
+          <li>Business is policy owner and beneficiary</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>The right structure depends on the number of owners, the business entity type, the tax situation, and the long-term ownership goals of the surviving partners.</p>
+
+    <h2>Why Buy-Sell Insurance Should Be Set Up Earlier Than Most Owners Think</h2>
+
+    <p>Like most insurance strategies, the time to implement buy-sell planning is before it becomes urgent. When owners are younger and healthier:</p>
+
+    <div class="diagnostic">
+      <p class="diagnostic-label">The Cost of Waiting</p>
+      <ul>
+        <li>Insurance is significantly less expensive — premiums are based on age and health at the time of application</li>
+        <li>Underwriting options are broader — health conditions that develop over time can limit or eliminate coverage options later</li>
+        <li>Valuation agreements are easier to establish — before a health event creates disagreement about what the business is worth</li>
+        <li>Plans are easier to maintain — an existing structure is easier to update than building one from scratch</li>
+      </ul>
+    </div>
+
+    <p>Waiting doesn't reduce the need for buy-sell planning. It increases the cost, reduces the options, and raises the risk that a health event will make the conversation moot before the plan is in place.</p>
+
+    <h2>Buy-Sell Planning for Different Business Structures</h2>
+
+    <div class="entity-blocks">
+      <div class="entity-block">
+        <h3>Corporations (C-Corp and S-Corp)</h3>
+        <p>Stock buyout agreements must account for S-Corp shareholder eligibility rules and the tax treatment of redemption versus cross-purchase structures. Corporate-owned life insurance has specific tax implications that require coordination with a CPA.</p>
+      </div>
+      <div class="entity-block">
+        <h3>Limited Liability Companies (LLCs)</h3>
+        <p>Operating agreement provisions govern membership interest transfers and buyouts. Buy-sell insurance for LLCs must align with existing operating agreement language — or prompt a review and update of that language.</p>
+      </div>
+      <div class="entity-block">
+        <h3>Partnerships</h3>
+        <p>Partnership agreements establish how partner interests are transferred at death or departure. Funded buy-sell planning for partnerships often involves both life insurance and disability buyout coverage — addressing death and long-term disability as separate triggering events.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="faq-block">
+    <h2>Frequently Asked Questions: Buy-Sell Insurance for Business Owners</h2>
+
+    <div class="faq-item">
+      <p class="faq-q">What is buy-sell insurance and how does it work?</p>
+      <p class="faq-a">Buy-sell insurance is life insurance specifically structured to fund a buy-sell agreement between business co-owners. When one owner dies, the insurance provides immediate cash to complete a pre-agreed buyout — paying the deceased owner's family fair value while transferring ownership to the surviving owner or the business entity.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Do I need a buy-sell agreement if I have a business partner?</p>
+      <p class="faq-a">Yes. Any business with more than one owner should have a funded buy-sell agreement in place. Without one, an ownership transition triggered by death, disability, or departure can result in legal disputes, forced business sales, and outcomes that are damaging for both the surviving owner and the deceased owner's family.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">What is the difference between a cross-purchase and entity purchase buy-sell agreement?</p>
+      <p class="faq-a">In a cross-purchase agreement, individual owners hold insurance on each other and buy the deceased owner's interest directly. In an entity purchase agreement, the business holds insurance and redeems the deceased owner's interest. The right structure depends on the number of owners, entity type, and tax considerations — and should be determined in coordination with a CPA and estate planning attorney.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">How is the business valued in a buy-sell agreement?</p>
+      <p class="faq-a">Buy-sell agreements typically establish a valuation method in advance — either a fixed price updated periodically, a formula based on revenue or earnings, or a third-party appraisal at the time of the triggering event. Establishing the valuation method before a transition event prevents disputes between surviving owners and the deceased owner's estate.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Can buy-sell insurance cover disability as well as death?</p>
+      <p class="faq-a">Yes. Disability buyout insurance is a separate product designed to fund a buyout when an owner becomes permanently disabled rather than deceased. For many businesses, disability is actually a more likely triggering event than death during peak ownership years — making disability buyout coverage an important complement to life insurance-funded buy-sell planning.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">How much does buy-sell insurance cost for a small business?</p>
+      <p class="faq-a">Premium costs depend on the owner's age, health, the coverage amount required, and the policy structure selected. The coverage amount should reflect the owner's proportional share of the business value established in the buy-sell agreement. Setting up coverage earlier — when owners are younger and healthier — produces significantly lower premiums than waiting until coverage becomes urgent.</p>
+    </div>
+  </div>
+
+  <div class="article-cta">
+    <h2>No Funded Plan? <em>The Conversation Is Overdue.</em></h2>
+    <p>If you have a co-owner and no funded buy-sell agreement, or an agreement that hasn't been reviewed recently, we're happy to start that conversation.</p>
+    <a href="index.html#contact" class="btn-primary">Start the Conversation &rarr;</a>
+  </div>
+
+  <p class="disclaimer">Rexford Insurance Solutions &mdash; Education First. Insurance Second. &nbsp;|&nbsp; California &nbsp;|&nbsp; Lic. 6017874. This article is for general informational and educational purposes only. It does not constitute legal, tax, or financial advice. Buy-sell planning involves legal and tax complexities that vary by business structure and jurisdiction. Consult qualified legal, tax, and financial advisors before implementing any buy-sell strategy.</p>
+
+</div>
+
+<footer>
+  <a href="index.html" class="logo" style="color: var(--warm-white);">Rexford <span>Insurance</span></a>
+  <p>Rexford Insurance Solutions &nbsp;|&nbsp; California &nbsp;|&nbsp; Lic. 6017874</p>
+  <p style="color: rgba(253,250,245,0.2); font-size: 11px;">&copy; 2026 Rexford Insurance Solutions</p>
+</footer>
+
+</body>
+</html>
