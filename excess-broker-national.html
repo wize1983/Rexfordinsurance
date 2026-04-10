@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>California-Based. Nationally Active. Commercial Insurance Built for Complex Risk. — Rexford Insurance Solutions</title>
+  <meta name="description" content="Most commercial insurance brokers are built for straightforward risks in familiar markets. Rexford Insurance Solutions was built for everything else — complex risk, multi-state programs, and the specialty market access that national businesses actually need.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0D1B2A;
+      --gold: #C9A84C;
+      --gold-light: #E8C97A;
+      --cream: #F5F0E8;
+      --warm-white: #FDFAF5;
+      --gray: #6B7280;
+      --light-gray: #E8E4DC;
+      --dark-gold: #A07830;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--warm-white); color: var(--navy); overflow-x: hidden; font-size: 18px; }
+
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      padding: 20px 60px; display: flex; justify-content: space-between; align-items: center;
+      background: rgba(253,250,245,0.95); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; letter-spacing: 0.05em; color: var(--navy); text-decoration: none; }
+    .logo span { color: var(--gold); }
+    nav ul { list-style: none; display: flex; gap: 40px; align-items: center; }
+    nav ul a { text-decoration: none; color: var(--navy); font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.3s; }
+    nav ul a:hover { color: var(--gold); }
+    .nav-cta { background: var(--navy); color: var(--warm-white) !important; padding: 10px 24px; border-radius: 2px; transition: background 0.3s !important; }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--navy) !important; }
+
+    .hero {
+      background: var(--navy); padding: 160px 60px 100px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.05) 0%, transparent 50%);
+    }
+    .hero-inner { position: relative; max-width: 800px; margin: 0 auto; }
+    .breadcrumb { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(201,168,76,0.7); margin-bottom: 28px; }
+    .breadcrumb a { color: rgba(201,168,76,0.7); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 62px); font-weight: 300; color: var(--warm-white); line-height: 1.15; margin-bottom: 28px; }
+    .hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero-meta { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+    .hero-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,168,76,0.3); padding: 6px 14px; }
+
+    .article-wrap { max-width: 740px; margin: 0 auto; padding: 80px 60px 100px; }
+
+    .lede { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 2.5vw, 26px); font-weight: 300; font-style: italic; line-height: 1.7; color: var(--navy); border-left: 3px solid var(--gold); padding-left: 28px; margin-bottom: 56px; }
+
+    .body h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 34px); font-weight: 400; color: var(--navy); margin: 56px 0 20px; line-height: 1.25; }
+    .body p { font-size: 17px; font-weight: 300; line-height: 1.9; color: #2C3E50; margin-bottom: 24px; }
+
+    .callout {
+      background: var(--cream); border-left: 4px solid var(--gold);
+      padding: 32px 36px; margin: 48px 0;
+    }
+    .callout p { font-size: 16px; font-weight: 300; line-height: 1.85; color: var(--navy); margin: 0; }
+    .callout p + p { margin-top: 14px; }
+    .callout strong { font-weight: 500; }
+
+    .diagnostic {
+      border: 1px solid var(--light-gray); padding: 40px; margin: 48px 0;
+      background: var(--warm-white);
+    }
+    .diagnostic-label {
+      font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 20px;
+    }
+    .diagnostic ul { list-style: none; padding: 0; }
+    .diagnostic ul li {
+      font-size: 16px; font-weight: 300; color: var(--navy);
+      padding: 12px 0; border-bottom: 1px solid var(--light-gray);
+      display: flex; align-items: flex-start; gap: 14px; line-height: 1.6;
+    }
+    .diagnostic ul li:last-child { border-bottom: none; }
+    .diagnostic ul li::before { content: '→'; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+
+    .problem-grid { margin: 48px 0; }
+    .problem-item { padding: 32px 0; border-bottom: 1px solid var(--light-gray); }
+    .problem-item:first-child { border-top: 1px solid var(--light-gray); }
+    .problem-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
+    .problem-item p { font-size: 16px; font-weight: 300; line-height: 1.85; color: #4A5568; margin: 0; }
+
+    .industry-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+      background: var(--light-gray); border: 1px solid var(--light-gray); margin: 48px 0;
+    }
+    .industry-cell { background: var(--warm-white); padding: 24px 28px; }
+    .industry-cell p { font-size: 15px; font-weight: 300; color: var(--navy); line-height: 1.6; display: flex; gap: 12px; align-items: flex-start; margin: 0; }
+    .industry-cell p::before { content: '→'; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+
+    .stat-strip {
+      background: var(--navy); padding: 56px 48px; margin: 48px 0;
+      position: relative; overflow: hidden;
+    }
+    .stat-strip::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(201,168,76,0.07) 0%, transparent 60%);
+    }
+    .stat-strip-inner { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+    .stat-item { text-align: center; }
+    .stat-item .stat-label { font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(201,168,76,0.7); margin-bottom: 12px; }
+    .stat-item .stat-val { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3vw, 34px); font-weight: 300; color: var(--gold-light); line-height: 1.2; }
+
+    .faq-block { margin: 56px 0; }
+    .faq-block h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 34px); font-weight: 400; color: var(--navy); margin-bottom: 32px; }
+    .faq-item { border-bottom: 1px solid var(--light-gray); padding: 28px 0; }
+    .faq-item:first-of-type { border-top: 1px solid var(--light-gray); }
+    .faq-q { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--navy); margin-bottom: 12px; }
+    .faq-a { font-size: 16px; font-weight: 300; line-height: 1.85; color: #4A5568; }
+
+    .article-cta {
+      background: var(--navy); padding: 56px; margin: 64px 0 0; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .article-cta::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.08) 0%, transparent 70%);
+    }
+    .article-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 3.5vw, 40px); font-weight: 300; color: var(--warm-white); margin-bottom: 16px; position: relative; }
+    .article-cta h2 em { font-style: italic; color: var(--gold-light); }
+    .article-cta p { font-size: 15px; font-weight: 300; color: rgba(253,250,245,0.6); line-height: 1.8; position: relative; max-width: 520px; margin: 0 auto 36px; }
+    .btn-primary {
+      display: inline-block; background: var(--gold); color: var(--navy);
+      padding: 16px 40px; font-size: 12px; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; text-decoration: none; transition: all 0.3s;
+      font-family: 'DM Sans', sans-serif; position: relative;
+    }
+    .btn-primary:hover { background: var(--gold-light); }
+
+    .disclaimer { font-size: 12px; font-weight: 300; color: var(--gray); line-height: 1.7; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--light-gray); }
+
+    footer {
+      background: #070E17; padding: 40px 60px;
+      display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid rgba(201,168,76,0.15);
+    }
+    footer p { font-size: 12px; color: rgba(253,250,245,0.3); letter-spacing: 0.05em; }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      nav ul { display: none; }
+      .hero { padding: 120px 24px 60px; }
+      .article-wrap { padding: 48px 24px 60px; }
+      .article-cta { padding: 48px 24px; }
+      .stat-strip { padding: 40px 24px; }
+      .stat-strip-inner { grid-template-columns: 1fr; gap: 28px; }
+      .industry-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 12px; text-align: center; padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Rexford <span>Insurance</span></a>
+  <ul>
+    <li><a href="index.html#legacy">Legacy Planning</a></li>
+    <li><a href="index.html#risk">Risk Advisory</a></li>
+    <li><a href="insights.html">Insights</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="breadcrumb"><a href="insights.html">Insights</a> &nbsp;/&nbsp; Risk Advisory</p>
+    <h1>California-Based. Nationally Active.<br><em>Commercial Insurance Built for Complex Risk.</em></h1>
+    <div class="hero-meta">
+      <span class="hero-tag">Risk Advisory</span>
+      <span class="hero-tag">Business Owners</span>
+      <span class="hero-tag">California</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-wrap">
+
+  <p class="lede">
+    Most commercial insurance brokers are built for straightforward risks in familiar markets. Rexford Insurance Solutions was built for everything else — complex risk, multi-state programs, and the specialty market access that national businesses actually need.
+  </p>
+
+  <div class="body">
+
+    <h2>Who We Work With Nationally</h2>
+
+    <p>Businesses that work with Rexford typically share one common characteristic: their insurance needs have become strategic rather than transactional. Specifically, we work with organizations that have:</p>
+
+    <div class="diagnostic">
+      <p class="diagnostic-label">When Businesses Outgrow Regional Brokers</p>
+      <ul>
+        <li>Multi-state operations requiring consistent, coordinated coverage across jurisdictions rather than fragmented state-by-state programs</li>
+        <li>Property or payroll in multiple states where carrier appetite, regulatory requirements, and underwriting standards vary significantly</li>
+        <li>Layered or excess programs that require access to national and international specialty carriers rather than standard market solutions</li>
+        <li>Complex risk profiles that don't fit regional underwriting boxes — including difficult-to-place risks, high-value properties, and specialized industries</li>
+      </ul>
+    </div>
+
+    <div class="callout">
+      <p>If your business has grown beyond what a regional broker can structure effectively, that's precisely where Rexford's market access and carrier relationships are designed to add value.</p>
+    </div>
+
+    <h2>Why California Experience Matters for National Risk</h2>
+
+    <p>California is one of the most complex regulatory and risk environments in the country — and operating in it creates capabilities that translate directly to complex risk nationwide.</p>
+
+    <div class="stat-strip">
+      <div class="stat-strip-inner">
+        <div class="stat-item">
+          <p class="stat-label">Litigation Environment</p>
+          <div class="stat-val">Most Aggressive<br>in the U.S.</div>
+        </div>
+        <div class="stat-item">
+          <p class="stat-label">Catastrophic Exposure</p>
+          <div class="stat-val">Wildfire,<br>Earthquake &amp; More</div>
+        </div>
+        <div class="stat-item">
+          <p class="stat-label">Regulatory Complexity</p>
+          <div class="stat-val">Among the<br>Most Demanding</div>
+        </div>
+      </div>
+    </div>
+
+    <p>The underwriting discipline, carrier relationships, and structural experience developed in California's market are directly applicable to complex commercial risk anywhere in the country. Businesses in Texas, Florida, New York, Colorado, and across the United States face versions of the same challenges — and benefit from the same approach.</p>
+
+    <h2>The Problem With Fragmented National Insurance Programs</h2>
+
+    <div class="problem-grid">
+      <div class="problem-item">
+        <h3>Inconsistent Underwriting Across States</h3>
+        <p>Different carriers, different terms, different exclusions for the same risk in different jurisdictions — creating programs that look unified but aren't.</p>
+      </div>
+      <div class="problem-item">
+        <h3>Carrier Appetite Gaps by Jurisdiction</h3>
+        <p>Markets willing to write risk in one state that decline the same risk in another, creating coverage holes in multi-state programs that only surface at claim time.</p>
+      </div>
+      <div class="problem-item">
+        <h3>Programs That Don't Scale</h3>
+        <p>Coverage structures designed for a single-state operation that become inadequate as the business grows nationally — often without anyone noticing until it matters.</p>
+      </div>
+      <div class="problem-item">
+        <h3>Excess and Surplus Lines Complexity</h3>
+        <p>Specialty risks that require E&amp;S market access and the carrier relationships to place them effectively — beyond what regional brokers typically maintain.</p>
+      </div>
+    </div>
+
+    <h2>How Rexford Structures National Commercial Insurance Programs</h2>
+
+    <div class="diagnostic">
+      <p class="diagnostic-label">National Capabilities</p>
+      <ul>
+        <li>Excess and surplus lines placement nationwide — access to specialty markets for risks that standard carriers decline or underwrite inadequately</li>
+        <li>Layered property and casualty programs — structured coverage for high-value, complex, or geographically distributed risk</li>
+        <li>Complex commercial, real estate, and operational risk — including difficult-to-place industries and non-standard exposures</li>
+        <li>Ownership and transition-driven insurance planning — coverage aligned with M&amp;A, ownership changes, and business transitions</li>
+        <li>Program unification across jurisdictions — replacing fragmented state-by-state coverage with coordinated national programs that scale</li>
+      </ul>
+    </div>
+
+    <h2>Industries and Risk Types We Place Nationally</h2>
+
+    <div class="industry-grid">
+      <div class="industry-cell"><p>Commercial real estate portfolios spanning multiple states</p></div>
+      <div class="industry-cell"><p>Hospitality, senior living, and healthcare with multi-state footprints</p></div>
+      <div class="industry-cell"><p>Construction and contracting businesses operating across jurisdictions</p></div>
+      <div class="industry-cell"><p>Manufacturing and distribution with facilities in multiple states</p></div>
+      <div class="industry-cell"><p>Professional services firms with national client exposure</p></div>
+      <div class="industry-cell"><p>Excess liability, environmental, cyber, and specialty lines placement</p></div>
+    </div>
+
+    <p>If your industry isn't listed, the relevant question is simpler: does your current coverage structure actually reflect the complexity of your business — or is it a regional solution applied to a national problem?</p>
+
+  </div>
+
+  <div class="faq-block">
+    <h2>Frequently Asked Questions: National Commercial Insurance With Rexford</h2>
+
+    <div class="faq-item">
+      <p class="faq-q">Can a California-based insurance broker place coverage in other states?</p>
+      <p class="faq-a">Yes. Licensed insurance brokers can place coverage in states beyond their home state through non-resident licensing and excess and surplus lines market access. Rexford Insurance Solutions places commercial coverage for businesses operating across the United States.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">What is excess and surplus lines insurance and when does a business need it?</p>
+      <p class="faq-a">Excess and surplus lines insurance covers risks that standard admitted carriers decline or underwrite with significant restrictions. Businesses with complex, unusual, or high-hazard risk profiles — including certain industries, large property schedules, difficult claims histories, or specialty exposures — often require E&amp;S market placement to obtain adequate coverage.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">What is a layered insurance program and does my business need one?</p>
+      <p class="faq-a">A layered program uses multiple carriers to provide coverage in sequential layers above a primary policy — allowing businesses to obtain higher total limits than any single carrier would provide alone. Layered programs are common for large commercial real estate, complex liability exposures, and businesses requiring excess limits above standard market capacity.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">How does multi-state insurance work for businesses with operations in several states?</p>
+      <p class="faq-a">Multi-state businesses need coverage that accounts for varying regulatory requirements, carrier appetites, and risk environments across jurisdictions. A properly structured national program coordinates these requirements into a unified coverage approach rather than managing separate, potentially inconsistent policies state by state.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Why do complex businesses outgrow regional insurance brokers?</p>
+      <p class="faq-a">Regional brokers typically have strong relationships with standard admitted carriers in their local market — but limited access to national specialty markets, excess and surplus lines carriers, and the underwriting experience required to structure coverage for genuinely complex risks. As businesses grow in scale, geography, or operational complexity, their insurance needs often exceed what a regional broker is equipped to address.</p>
+    </div>
+  </div>
+
+  <div class="article-cta">
+    <h2>Coverage Built Around Reality —<br><em>Not Templates</em></h2>
+    <p>Understand the risk completely. Structure the coverage accordingly. Access the markets required to place it correctly. In California or anywhere in the United States.</p>
+    <a href="index.html#contact" class="btn-primary">Start the Conversation &rarr;</a>
+  </div>
+
+  <p class="disclaimer">Rexford Insurance Solutions &mdash; Education First. Insurance Second. &nbsp;|&nbsp; California &nbsp;|&nbsp; Lic. 6017874. This article is for general informational purposes only. Coverage availability, terms, and carrier appetite vary by risk type, jurisdiction, and market conditions. Contact Rexford Insurance Solutions for a current assessment of your specific insurance needs.</p>
+
+</div>
+
+<footer>
+  <a href="index.html" class="logo" style="color: var(--warm-white);">Rexford <span>Insurance</span></a>
+  <p>Rexford Insurance Solutions &nbsp;|&nbsp; California &nbsp;|&nbsp; Lic. 6017874</p>
+  <p style="color: rgba(253,250,245,0.2); font-size: 11px;">&copy; 2026 Rexford Insurance Solutions</p>
+</footer>
+
+</body>
+</html>
