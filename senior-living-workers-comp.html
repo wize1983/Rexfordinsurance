@@ -61,12 +61,28 @@ nav ul a:hover { color: var(--gold); }
 .btn-primary:hover { background: var(--dark-gold); }
 footer { background: #070E17; padding: 40px 60px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201,168,76,0.15); }
 footer p { font-size: 12px; color: rgba(253,250,245,0.3); letter-spacing: 0.05em; }
-@media (max-width: 768px) { nav { padding: 16px 24px; } nav ul { display: none; } .hero { padding: 120px 24px 60px; } .article-wrap { padding: 60px 24px 80px; } .article-cta { padding: 48px 24px; } footer { flex-direction: column; gap: 12px; text-align: center; padding: 32px 24px; } }
-</style>
+@media (max-width: 768px) { nav { padding: 16px 24px; } /* mobile nav handled by hamburger */ .hero { padding: 120px 24px 60px; } .article-wrap { padding: 60px 24px 80px; } .article-cta { padding: 48px 24px; } footer { flex-direction: column; gap: 12px; text-align: center; padding: 32px 24px; } }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; z-index: 200; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); transition: all 0.3s; border-radius: 2px; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      nav ul { display: none; flex-direction: column; position: fixed; top: 57px; left: 0; right: 0; background: rgba(253,250,245,0.98); backdrop-filter: blur(10px); padding: 24px 32px 32px; gap: 0; border-bottom: 1px solid var(--light-gray); z-index: 100; }
+      nav ul.open { display: flex; }
+      nav ul li { border-bottom: 1px solid var(--light-gray); }
+      nav ul li:last-child { border-bottom: none; }
+      nav ul a { display: block; padding: 16px 0; font-size: 14px; }
+      nav ul a.nav-cta { background: none; color: var(--navy) !important; padding: 16px 0; border-radius: 0; }
+    }
+  </style>
 </head>
 <body>
 <nav>
   <a href="index.html" class="logo">Rexford <span>Insurance</span></a>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   <ul>
     <li><a href="index.html#legacy">Legacy Planning</a></li>
     <li><a href="index.html#risk">Risk Advisory</a></li>
@@ -164,5 +180,18 @@ footer p { font-size: 12px; color: rgba(253,250,245,0.3); letter-spacing: 0.05em
   <p>Rexford Insurance Solutions &nbsp;|&nbsp; California &nbsp;|&nbsp; Lic. 6017874</p>
   <p style="color: rgba(253,250,245,0.2); font-size: 11px;">© 2026 Rexford Insurance Solutions</p>
 </footer>
+<script>
+  document.querySelector('.hamburger').addEventListener('click', function() {
+    this.classList.toggle('open');
+    document.querySelector('nav ul').classList.toggle('open');
+  });
+  // Close menu on link click
+  document.querySelectorAll('nav ul a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      document.querySelector('.hamburger').classList.remove('open');
+      document.querySelector('nav ul').classList.remove('open');
+    });
+  });
+</script>
 </body>
 </html>
