@@ -113,6 +113,30 @@
     .value-cell h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--navy); margin-bottom: 12px; }
     .value-cell p { font-size: 15px; font-weight: 300; color: #4A5568; line-height: 1.8; margin: 0; }
 
+    /* Why Rexford banner */
+    .why-rexford {
+      background: var(--navy); padding: 100px 60px;
+      position: relative; overflow: hidden;
+    }
+    .why-rexford::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.05) 0%, transparent 50%);
+    }
+    .why-rexford-inner { max-width: 1200px; margin: 0 auto; position: relative; }
+    .why-rexford .eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+    .why-rexford h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 62px); font-weight: 300; color: var(--warm-white); line-height: 1.1; margin-bottom: 40px; }
+    .why-rexford h2 em { font-style: italic; color: var(--gold-light); }
+    .why-rexford-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .why-rexford-body p { font-size: 17px; font-weight: 300; line-height: 1.9; color: rgba(253,250,245,0.65); margin-bottom: 22px; }
+    .why-rexford-body p:last-child { margin-bottom: 0; }
+    .why-rexford-body p strong { color: rgba(253,250,245,0.9); font-weight: 400; }
+    .why-rexford-points { display: flex; flex-direction: column; gap: 0; }
+    .why-point { padding: 24px 0; border-bottom: 1px solid rgba(201,168,76,0.15); }
+    .why-point:first-child { border-top: 1px solid rgba(201,168,76,0.15); }
+    .why-point h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--gold-light); margin-bottom: 8px; }
+    .why-point p { font-size: 15px; font-weight: 300; color: rgba(253,250,245,0.55); line-height: 1.75; margin: 0; }
+
     /* CTA */
     .cta-section { background: var(--navy); padding: 100px 60px; text-align: center; position: relative; overflow: hidden; }
     .cta-section::before {
@@ -142,6 +166,7 @@
       .two-col { grid-template-columns: 1fr; gap: 48px; }
       .market-grid { grid-template-columns: 1fr; }
       .values-grid { grid-template-columns: 1fr; }
+      .why-rexford-grid { grid-template-columns: 1fr; gap: 40px; }
     }
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
@@ -149,6 +174,7 @@
       .hero { padding: 120px 24px 60px; }
       .section { padding: 60px 24px; }
       .philosophy { padding: 60px 24px; }
+      .why-rexford { padding: 80px 24px; }
       .cta-section { padding: 80px 24px; }
       footer { flex-direction: column; gap: 12px; text-align: center; padding: 32px 24px; }
     }
@@ -257,8 +283,42 @@
   </div>
 </div>
 
+<!-- WHY REXFORD — Outsourced Risk Management Arm -->
+<div class="why-rexford">
+  <div class="why-rexford-inner">
+    <p class="eyebrow">Why Rexford</p>
+    <h2>We're Your Outsourced<br><em>Risk Management Arm</em></h2>
+    <div class="why-rexford-grid">
+      <div class="why-rexford-body">
+        <p>Most businesses don't need a full-time risk manager. They need someone who <strong>functions like one</strong> — someone who understands their operations, monitors their exposures, and stays ahead of what they don't have time to track.</p>
+        <p>That's the role Rexford plays. Not a broker who calls at renewal. Not a vendor who places a policy and disappears. A risk management partner who sits alongside your CPA, your attorney, and your leadership team — and keeps the insurance side of your operation running the way it should.</p>
+        <p>We handle the audit. The loss analysis. The carrier conversations. The contractual requirements buried in your vendor agreements. The coverage structure that needs to hold up under scrutiny — not just look good on paper.</p>
+        <p><strong>So you can run the business.</strong></p>
+      </div>
+      <div class="why-rexford-points">
+        <div class="why-point">
+          <h4>Ongoing Risk Monitoring</h4>
+          <p>We don't wait for renewal to review your program. As your business changes — new contracts, new locations, new hires — we stay ahead of the exposure.</p>
+        </div>
+        <div class="why-point">
+          <h4>Coordinated With Your Advisors</h4>
+          <p>We work directly alongside your CPA, attorney, and financial team. Risk management doesn't happen in isolation — and neither do we.</p>
+        </div>
+        <div class="why-point">
+          <h4>Audit-First, Always</h4>
+          <p>Every engagement starts with a clear-eyed look at what you have. Most clients are surprised by what we find. All of them are better off knowing.</p>
+        </div>
+        <div class="why-point">
+          <h4>No Extra Headcount Required</h4>
+          <p>The infrastructure of a risk management department — without the overhead. You get institutional-level attention without adding to payroll.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Market access -->
-<div class="section" style="padding-top: 0;">
+<div class="section" style="padding-top: 100px;">
   <p class="section-eyebrow">Market Access</p>
   <h2>The Market Partners That Make <em>Rexford Work at Scale</em></h2>
   <p>Rexford Insurance Solutions collaborates with Highland Capital Brokerage, CRC Group, AMWINS, and Warner Pacific — bringing the infrastructure, carrier relationships, and market access of a national firm with the focus of an independent advisor.</p>
