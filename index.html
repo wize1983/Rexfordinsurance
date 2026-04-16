@@ -109,7 +109,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: 
+    background:
       radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
       radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.05) 0%, transparent 50%);
   }
@@ -699,6 +699,21 @@
       nav ul a { display: block; padding: 16px 0; font-size: 14px; }
       nav ul a.nav-cta { background: none; color: var(--navy) !important; padding: 16px 0; border-radius: 0; }
     }
+
+    /* What We Do */
+    .what-we-do { background: var(--warm-white); padding: 100px 60px; border-bottom: 1px solid var(--light-gray); }
+    .what-we-do-inner { max-width: 1200px; margin: 0 auto; }
+    .what-we-do-inner .section-eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .what-we-do-inner h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4vw, 50px); font-weight: 300; color: var(--navy); line-height: 1.15; margin-bottom: 48px; }
+    .what-we-do-inner h2 em { font-style: italic; }
+    .what-we-do-grid { display: grid; grid-template-columns: 1fr 380px; gap: 80px; align-items: start; }
+    .what-we-do-text p { font-size: 17px; font-weight: 300; line-height: 1.9; color: #2C3E50; margin-bottom: 22px; }
+    .what-we-do-text p:last-child { margin-bottom: 0; }
+    .what-we-do-aside { position: sticky; top: 100px; }
+    .aside-statement { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 36px); font-weight: 300; font-style: italic; color: var(--navy); line-height: 1.35; margin-bottom: 28px; border-left: 3px solid var(--gold); padding-left: 24px; }
+    .aside-tagline { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); padding-left: 24px; }
+    @media (max-width: 900px) { .what-we-do-grid { grid-template-columns: 1fr; gap: 40px; } .what-we-do-aside { position: static; } }
+    @media (max-width: 768px) { .what-we-do { padding: 60px 24px; } }
   </style>
 </head>
 <body>
@@ -747,6 +762,25 @@
   <a href="#hard-to-place">Hard to Place</a>
   <a href="#contact">Free Risk Audit</a>
 </div>
+
+<!-- WHAT WE DO -->
+<section class="what-we-do">
+  <div class="what-we-do-inner">
+    <p class="section-eyebrow">What We Do</p>
+    <h2>We Roll Up Our Sleeves.<br><em>Every Time.</em></h2>
+    <div class="what-we-do-grid">
+      <div class="what-we-do-text">
+        <p>Rexford works alongside business owners, healthcare operators, families, and real estate investors — aligning insurance and risk management with the way you actually operate.</p>
+        <p>Our clients come through CPAs, attorneys, and wealth managers who already have the relationship. We collaborate with the team and enjoy bringing the different pieces of the puzzle together.</p>
+        <p>Beyond insurance, our team brings 20 years of operating experience inside complex businesses across real estate, investment banking, family offices, and business development. Risk management was never optional. It was part of the job every single day.</p>
+      </div>
+      <div class="what-we-do-aside">
+        <p class="aside-statement">We don't just place policies.<br>We advise on risk.</p>
+        <p class="aside-tagline">That's what we do. Educate. Advise. Insure.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- MISSION -->
 <section class="mission">
