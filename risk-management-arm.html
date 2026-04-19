@@ -28,7 +28,13 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: var(--warm-white); color: var(--navy); overflow-x: hidden; font-size: 18px; }
-    nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 20px 60px; display: flex; justify-content: space-between; align-items: center; background: rgba(253,250,245,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--light-gray); }
+
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      padding: 20px 60px; display: flex; justify-content: space-between; align-items: center;
+      background: rgba(253,250,245,0.95); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--light-gray);
+    }
     .logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; letter-spacing: 0.05em; color: var(--navy); text-decoration: none; }
     .logo span { color: var(--gold); }
     nav ul { list-style: none; display: flex; gap: 40px; align-items: center; }
@@ -36,8 +42,16 @@
     nav ul a:hover { color: var(--gold); }
     .nav-cta { background: var(--navy); color: var(--warm-white) !important; padding: 10px 24px; border-radius: 2px; transition: background 0.3s !important; }
     .nav-cta:hover { background: var(--gold) !important; color: var(--navy) !important; }
-    .hero { background: var(--navy); padding: 160px 60px 100px; text-align: center; position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.05) 0%, transparent 50%); }
+
+    .hero {
+      background: var(--navy); padding: 160px 60px 100px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.05) 0%, transparent 50%);
+    }
     .hero-inner { position: relative; max-width: 800px; margin: 0 auto; }
     .breadcrumb { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(201,168,76,0.7); margin-bottom: 28px; }
     .breadcrumb a { color: rgba(201,168,76,0.7); text-decoration: none; }
@@ -46,43 +60,94 @@
     .hero h1 em { font-style: italic; color: var(--gold-light); }
     .hero-meta { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
     .hero-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,168,76,0.3); padding: 6px 14px; }
+
     .article-wrap { max-width: 740px; margin: 0 auto; padding: 80px 60px 100px; }
+
     .opener { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.5vw, 44px); font-weight: 300; color: var(--navy); line-height: 1.2; margin-bottom: 40px; }
     .opener em { font-style: italic; color: var(--gold); }
     .lede { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 2.5vw, 26px); font-weight: 300; font-style: italic; line-height: 1.7; color: var(--navy); border-left: 3px solid var(--gold); padding-left: 28px; margin-bottom: 56px; }
+
     .body h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 34px); font-weight: 400; color: var(--navy); margin: 56px 0 20px; line-height: 1.25; }
     .body p { font-size: 17px; font-weight: 300; line-height: 1.9; color: #2C3E50; margin-bottom: 24px; }
-    .callout { background: var(--cream); border-left: 4px solid var(--gold); padding: 32px 36px; margin: 48px 0; }
+
+    .callout {
+      background: var(--cream); border-left: 4px solid var(--gold);
+      padding: 32px 36px; margin: 48px 0;
+    }
     .callout p { font-size: 16px; font-weight: 300; line-height: 1.85; color: var(--navy); margin: 0; }
     .callout p + p { margin-top: 14px; }
     .callout strong { font-weight: 500; }
-    .diagnostic { border: 1px solid var(--light-gray); padding: 40px; margin: 48px 0; background: var(--warm-white); }
-    .diagnostic-label { font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+
+    .diagnostic {
+      border: 1px solid var(--light-gray); padding: 40px; margin: 48px 0;
+      background: var(--warm-white);
+    }
+    .diagnostic-label {
+      font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 20px;
+    }
     .diagnostic ul { list-style: none; padding: 0; }
-    .diagnostic ul li { font-size: 16px; font-weight: 300; color: var(--navy); padding: 12px 0; border-bottom: 1px solid var(--light-gray); display: flex; align-items: flex-start; gap: 14px; line-height: 1.6; }
+    .diagnostic ul li {
+      font-size: 16px; font-weight: 300; color: var(--navy);
+      padding: 12px 0; border-bottom: 1px solid var(--light-gray);
+      display: flex; align-items: flex-start; gap: 14px; line-height: 1.6;
+    }
     .diagnostic ul li:last-child { border-bottom: none; }
     .diagnostic ul li::before { content: '→'; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
-    .scenario-card { border: 1px solid var(--light-gray); padding: 36px; margin: 28px 0; position: relative; overflow: hidden; }
-    .scenario-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--gold); }
+
+    .scenario-card {
+      border: 1px solid var(--light-gray); padding: 36px; margin: 28px 0;
+      position: relative; overflow: hidden;
+    }
+    .scenario-card::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 3px; height: 100%; background: var(--gold);
+    }
     .scenario-label { font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
     .scenario-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--navy); margin-bottom: 12px; }
     .scenario-card p { font-size: 16px; font-weight: 300; line-height: 1.85; color: #4A5568; margin: 0; }
-    .warning-block { background: var(--navy); padding: 48px; margin: 48px 0; position: relative; overflow: hidden; }
-    .warning-block::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.1) 0%, transparent 60%); }
+
+    .warning-block {
+      background: var(--navy); padding: 48px; margin: 48px 0;
+      position: relative; overflow: hidden;
+    }
+    .warning-block::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.1) 0%, transparent 60%);
+    }
     .warning-label { font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(201,168,76,0.7); margin-bottom: 16px; position: relative; }
     .warning-block p { font-size: 16px; font-weight: 300; color: rgba(253,250,245,0.75); line-height: 1.85; position: relative; margin: 0; }
     .warning-block p + p { margin-top: 14px; }
     .warning-stat { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 44px); font-weight: 300; color: var(--gold-light); position: relative; margin: 16px 0 8px; }
-    .article-cta { background: var(--navy); padding: 56px; margin: 64px 0 0; text-align: center; position: relative; overflow: hidden; }
-    .article-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.08) 0%, transparent 70%); }
+
+    .article-cta {
+      background: var(--navy); padding: 56px; margin: 64px 0 0; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .article-cta::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.08) 0%, transparent 70%);
+    }
     .article-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 3.5vw, 40px); font-weight: 300; color: var(--warm-white); margin-bottom: 16px; position: relative; }
     .article-cta h2 em { font-style: italic; color: var(--gold-light); }
-    .article-cta p { font-size: 15px; font-weight: 300; color: rgba(253,250,245,0.6); line-height: 1.8; position: relative; max-width: 480px; margin-left: auto; margin-right: auto; margin-bottom: 36px; }
-    .btn-primary { display: inline-block; background: var(--gold); color: var(--navy); padding: 16px 40px; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; font-family: 'DM Sans', sans-serif; position: relative; }
+    .article-cta p { font-size: 15px; font-weight: 300; color: rgba(253,250,245,0.6); margin-bottom: 36px; line-height: 1.8; position: relative; max-width: 480px; margin-left: auto; margin-right: auto; margin-bottom: 36px; }
+    .btn-primary {
+      display: inline-block; background: var(--gold); color: var(--navy);
+      padding: 16px 40px; font-size: 12px; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; text-decoration: none; transition: all 0.3s;
+      font-family: 'DM Sans', sans-serif; position: relative;
+    }
     .btn-primary:hover { background: var(--gold-light); }
+
     .disclaimer { font-size: 12px; font-weight: 300; color: var(--gray); line-height: 1.7; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--light-gray); }
-    footer { background: #070E17; padding: 40px 60px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201,168,76,0.15); }
+
+    footer {
+      background: #070E17; padding: 40px 60px;
+      display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid rgba(201,168,76,0.15);
+    }
     footer p { font-size: 12px; color: rgba(253,250,245,0.3); letter-spacing: 0.05em; }
+
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
       .hero { padding: 120px 24px 60px; }
@@ -91,6 +156,7 @@
       .warning-block { padding: 40px 24px; }
       footer { flex-direction: column; gap: 12px; text-align: center; padding: 32px 24px; }
     }
+
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; z-index: 200; }
     .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); transition: all 0.3s; border-radius: 2px; }
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -210,6 +276,34 @@
       <p>The business owner may have the best instincts in the room. But the exposure often walks in through a side door — hired, promoted, or contracted in — without anyone connecting it back to what the policy actually covers.</p>
     </div>
 
+    <h2>The Businesses Where This Matters Most</h2>
+
+    <p>Every business benefits from an insurance lens on its operations. But there's a specific profile where the gap between "having coverage" and "managing risk" becomes genuinely expensive:</p>
+
+    <div class="scenario-card">
+      <p class="scenario-label">Profile Zero</p>
+      <h3>The Business That's Just Hoping</h3>
+      <p>The premium gets paid. The certificates go out. And somewhere in the back of the owner's mind is a quiet assumption that nothing catastrophic is actually going to happen. This isn't recklessness — it's how most businesses operate. Risk management gets deprioritized because the visible, urgent problems always outrank the invisible, expensive ones. Until the day they don't. The business that's "hoping" isn't a bad business. It's just a business that hasn't had its number called yet.</p>
+    </div>
+
+    <div class="scenario-card">
+      <p class="scenario-label">Profile One</p>
+      <h3>Complex or Fast-Growing Operations</h3>
+      <p>Revenue is up. Headcount is growing. New contracts are coming in with insurance requirements your current program wasn't built for. The business you described on your last renewal application isn't the business you're running today — and nobody has asked whether the coverage kept pace.</p>
+    </div>
+
+    <div class="scenario-card">
+      <p class="scenario-label">Profile Two</p>
+      <h3>Real Estate Investors and Family Offices</h3>
+      <p>The portfolio has grown faster than the insurance program. Different properties, different entities, different carriers — none of it coordinated. And the estate plan your attorney built assumes the insurance underneath it is solid. It may not be.</p>
+    </div>
+
+    <div class="scenario-card">
+      <p class="scenario-label">Profile Three</p>
+      <h3>Healthcare and Compliance-Driven Businesses</h3>
+      <p>Regulatory exposure, professional liability, and employment practices risk don't behave like standard commercial risk. They require carriers and coverage structures built specifically for the environment you operate in — and they require someone who understands what changes when the regulatory landscape shifts.</p>
+    </div>
+
     <h2>The Policies Everyone Knows About and Nobody Checks</h2>
 
     <p>Most businesses have them. The employee handbook. The safety procedures. The vendor onboarding checklist that requires a certificate of insurance before anyone sets foot on the property. The protocol for handling client complaints before they escalate.</p>
@@ -230,6 +324,25 @@
     <p>The insurance industry is structured around transactions. Brokers are compensated at placement. The incentive is to close the account and move on — not to stay involved in how the business operates between renewals.</p>
 
     <p>Bringing an insurance perspective to ongoing business decisions requires a different kind of relationship. It means understanding how the business actually operates, not just what it looks like on a renewal application. It means being available when a contract comes up for signature — not just when the premium is due.</p>
+
+    <div class="warning-block">
+      <p class="warning-label">The Real Cost of Unmanaged Risk</p>
+      <p class="warning-stat">Found at claim time.</p>
+      <p>The most expensive coverage gaps aren't the ones you know about. They're the ones your broker never flagged — the exclusion buried in the policy language, the sublimit that doesn't reflect current values, the entity that was never added to the schedule. These don't surface at renewal. They surface when you need the coverage most.</p>
+    </div>
+
+    <h2>What Rexford Does Differently</h2>
+
+    <p>Rexford was built around a simple premise: the clients who need the most from their insurance advisor are exactly the ones the standard brokerage model serves the worst.</p>
+
+    <p>Business owners with $10M–$100M at stake. Family offices managing complex, multi-entity portfolios. Real estate investors with hard-to-place properties and a patchwork of carriers. Healthcare operators navigating compliance-driven risk. These clients don't need a policy. They need a risk management partner.</p>
+
+    <p>That's the role Rexford plays. We start with an audit — a clear-eyed look at what you actually have versus what you think you have. We review the policies, the entities, the contracts, and the exposures. We map the gaps. And then we build a program that reflects how you actually operate, coordinated with the attorneys, CPAs, and wealth managers who are already in your corner.</p>
+
+    <div class="callout">
+      <p><strong>We don't lead with a product.</strong> We lead with a conversation about what you're actually exposed to — and whether your current coverage would hold up if something went wrong tomorrow.</p>
+      <p>Most clients are surprised by what that conversation reveals. All of them are better off for having it.</p>
+    </div>
 
     <h2>Where Families Feel This Most</h2>
 
@@ -260,34 +373,6 @@
       <p>The passing, the divorce, the succession — these aren't the moments to discover the gaps. They're the moments the gaps were always waiting for.</p>
     </div>
 
-    <h2>The Businesses Where This Matters Most</h2>
-
-    <p>Every business benefits from an insurance lens on its operations. But there's a specific profile where the gap between "having coverage" and "managing risk" becomes genuinely expensive:</p>
-
-    <div class="scenario-card">
-      <p class="scenario-label">Profile Zero</p>
-      <h3>The Business That's Just Hoping</h3>
-      <p>The premium gets paid. The certificates go out. And somewhere in the back of the owner's mind is a quiet assumption that nothing catastrophic is actually going to happen. This isn't recklessness — it's how most businesses operate. Risk management gets deprioritized because the visible, urgent problems always outrank the invisible, expensive ones. Until the day they don't. The business that's "hoping" isn't a bad business. It's just a business that hasn't had its number called yet.</p>
-    </div>
-
-    <div class="scenario-card">
-      <p class="scenario-label">Profile One</p>
-      <h3>Complex or Fast-Growing Operations</h3>
-      <p>Revenue is up. Headcount is growing. New contracts are coming in with insurance requirements your current program wasn't built for. The business you described on your last renewal application isn't the business you're running today — and nobody has asked whether the coverage kept pace.</p>
-    </div>
-
-    <div class="scenario-card">
-      <p class="scenario-label">Profile Two</p>
-      <h3>Real Estate Investors and Family Offices</h3>
-      <p>The portfolio has grown faster than the insurance program. Different properties, different entities, different carriers — none of it coordinated. And the estate plan your attorney built assumes the insurance underneath it is solid. It may not be.</p>
-    </div>
-
-    <div class="scenario-card">
-      <p class="scenario-label">Profile Three</p>
-      <h3>Healthcare and Compliance-Driven Businesses</h3>
-      <p>Regulatory exposure, professional liability, and employment practices risk don't behave like standard commercial risk. They require carriers and coverage structures built specifically for the environment you operate in — and they require someone who understands what changes when the regulatory landscape shifts.</p>
-    </div>
-
     <h2>What Happens as the Business Grows</h2>
 
     <p>Here's what tends to happen as a business scales: the operational complexity grows faster than the infrastructure supporting it. New entities get added. Headcount grows. Contracts get more sophisticated. Revenue diversifies into new lines of business.</p>
@@ -306,19 +391,6 @@
     <p>If the answer isn't a confident yes, that's not a minor detail. That's the gap.</p>
 
     <p>Educate. Advise. Insure. In that order. That's what we do.</p>
-
-    <h2>What Rexford Does Differently</h2>
-
-    <p>Rexford was built around a simple premise: the clients who need the most from their insurance advisor are exactly the ones the standard brokerage model serves the worst.</p>
-
-    <p>Business owners with $10M–$100M at stake. Family offices managing complex, multi-entity portfolios. Real estate investors with hard-to-place properties and a patchwork of carriers. Healthcare operators navigating compliance-driven risk. These clients don't need a policy placed. They need someone in the room when the decisions get made.</p>
-
-    <p>That's the role Rexford plays. We start with an audit — a clear-eyed look at what you actually have versus what you think you have. We review the policies, the entities, the contracts, and the exposures. We map the gaps. And then we build a program that reflects how you actually operate, coordinated with the attorneys, CPAs, and wealth managers who are already in your corner.</p>
-
-    <div class="callout">
-      <p><strong>We don't lead with a product.</strong> We lead with a conversation about what you're actually exposed to — and whether your current coverage would hold up if something went wrong tomorrow.</p>
-      <p>Most clients are surprised by what that conversation reveals. All of them are better off for having it.</p>
-    </div>
 
   </div>
 
