@@ -163,7 +163,7 @@
     animation: fadeUp 0.8s ease forwards 0.7s;
   }
 
-    .hero-method { font-size: 13px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-top: 28px; position: relative; }
+  .hero-method { font-size: 13px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-top: 28px; position: relative; }
 
   .hero-paths {
     display: flex;
@@ -280,42 +280,6 @@
     line-height: 1.8;
     color: var(--gray);
     max-width: 680px;
-  }
-
-  /* MISSION */
-  .mission {
-    background: var(--cream);
-  }
-
-  .mission-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-  }
-
-  .mission-quote {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(22px, 3vw, 36px);
-    font-weight: 300;
-    font-style: italic;
-    line-height: 1.4;
-    color: var(--navy);
-    border-left: 2px solid var(--gold);
-    padding-left: 32px;
-  }
-
-  .mission-text p {
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 1.9;
-    color: var(--gray);
-    margin-bottom: 20px;
-  }
-
-  .mission-text p strong {
-    color: var(--navy);
-    font-weight: 500;
   }
 
   /* PATH SECTIONS */
@@ -580,40 +544,6 @@
     letter-spacing: 0.05em;
   }
 
-  /* STAT ROW */
-  .stat-row {
-    display: flex;
-    gap: 0;
-    margin-top: 60px;
-    border: 1px solid var(--light-gray);
-  }
-
-  .stat {
-    flex: 1;
-    padding: 36px;
-    text-align: center;
-    border-right: 1px solid var(--light-gray);
-  }
-
-  .stat:last-child { border-right: none; }
-
-  .stat-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 48px;
-    font-weight: 300;
-    color: var(--gold);
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-
-  .stat-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--gray);
-  }
-
   /* INTRO STRIP */
   .intro-strip {
     background: var(--gold);
@@ -673,47 +603,43 @@
     .hero { padding: 100px 24px 60px; }
     .hero-paths { flex-direction: column; width: 100%; }
     .path-btn { min-width: unset; width: 100%; }
-    .mission-grid { grid-template-columns: 1fr; gap: 40px; }
     .problems-grid { grid-template-columns: 1fr; }
-    .stat-row { flex-direction: column; }
-    .stat { border-right: none; border-bottom: 1px solid var(--light-gray); }
-    .stat:last-child { border-bottom: none; }
     footer { flex-direction: column; gap: 16px; text-align: center; }
     .intro-strip { flex-direction: column; gap: 16px; align-items: center; padding: 20px 24px; }
     .audit-banner { padding: 60px 24px; }
     .contact { padding: 70px 24px; }
   }
 
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; z-index: 200; }
-    .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); transition: all 0.3s; border-radius: 2px; }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    @media (max-width: 768px) {
-      .hamburger { display: flex; }
-      nav ul { display: none; flex-direction: column; position: fixed; top: 57px; left: 0; right: 0; background: rgba(253,250,245,0.98); backdrop-filter: blur(10px); padding: 24px 32px 32px; gap: 0; border-bottom: 1px solid var(--light-gray); z-index: 100; }
-      nav ul.open { display: flex; }
-      nav ul li { border-bottom: 1px solid var(--light-gray); }
-      nav ul li:last-child { border-bottom: none; }
-      nav ul a { display: block; padding: 16px 0; font-size: 14px; }
-      nav ul a.nav-cta { background: none; color: var(--navy) !important; padding: 16px 0; border-radius: 0; }
-    }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; z-index: 200; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); transition: all 0.3s; border-radius: 2px; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  @media (max-width: 768px) {
+    .hamburger { display: flex; }
+    nav ul { display: none; flex-direction: column; position: fixed; top: 57px; left: 0; right: 0; background: rgba(253,250,245,0.98); backdrop-filter: blur(10px); padding: 24px 32px 32px; gap: 0; border-bottom: 1px solid var(--light-gray); z-index: 100; }
+    nav ul.open { display: flex; }
+    nav ul li { border-bottom: 1px solid var(--light-gray); }
+    nav ul li:last-child { border-bottom: none; }
+    nav ul a { display: block; padding: 16px 0; font-size: 14px; }
+    nav ul a.nav-cta { background: none; color: var(--navy) !important; padding: 16px 0; border-radius: 0; }
+  }
 
-    /* What We Do */
-    .what-we-do { background: var(--warm-white); padding: 100px 60px; border-bottom: 1px solid var(--light-gray); }
-    .what-we-do-inner { max-width: 1200px; margin: 0 auto; }
-    .what-we-do-inner .section-eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-    .what-we-do-inner h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4vw, 50px); font-weight: 300; color: var(--navy); line-height: 1.15; margin-bottom: 48px; }
-    .what-we-do-inner h2 em { font-style: italic; }
-    .what-we-do-grid { display: grid; grid-template-columns: 1fr 380px; gap: 80px; align-items: start; }
-    .what-we-do-text p { font-size: 17px; font-weight: 300; line-height: 1.9; color: #2C3E50; margin-bottom: 22px; }
-    .what-we-do-text p:last-child { margin-bottom: 0; }
-    .what-we-do-aside { position: sticky; top: 100px; }
-    .aside-statement { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 36px); font-weight: 300; font-style: italic; color: var(--navy); line-height: 1.35; margin-bottom: 28px; border-left: 3px solid var(--gold); padding-left: 24px; }
-    .aside-tagline { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); padding-left: 24px; }
-    @media (max-width: 900px) { .what-we-do-grid { grid-template-columns: 1fr; gap: 40px; } .what-we-do-aside { position: static; } }
-    @media (max-width: 768px) { .what-we-do { padding: 60px 24px; } }
-  </style>
+  /* What We Do */
+  .what-we-do { background: var(--warm-white); padding: 100px 60px; border-bottom: 1px solid var(--light-gray); }
+  .what-we-do-inner { max-width: 1200px; margin: 0 auto; }
+  .what-we-do-inner .section-eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+  .what-we-do-inner h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4vw, 50px); font-weight: 300; color: var(--navy); line-height: 1.15; margin-bottom: 48px; }
+  .what-we-do-inner h2 em { font-style: italic; }
+  .what-we-do-grid { display: grid; grid-template-columns: 1fr 380px; gap: 80px; align-items: start; }
+  .what-we-do-text p { font-size: 17px; font-weight: 300; line-height: 1.9; color: #2C3E50; margin-bottom: 22px; }
+  .what-we-do-text p:last-child { margin-bottom: 0; }
+  .what-we-do-aside { position: sticky; top: 100px; }
+  .aside-statement { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 36px); font-weight: 300; font-style: italic; color: var(--navy); line-height: 1.35; margin-bottom: 28px; border-left: 3px solid var(--gold); padding-left: 24px; }
+  .aside-tagline { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); padding-left: 24px; }
+  @media (max-width: 900px) { .what-we-do-grid { grid-template-columns: 1fr; gap: 40px; } .what-we-do-aside { position: static; } }
+  @media (max-width: 768px) { .what-we-do { padding: 60px 24px; } }
+</style>
 </head>
 <body>
 
@@ -722,13 +648,13 @@
   <a href="#" class="logo">Rexford <span>Insurance</span></a>
   <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   <ul>
-        <li><a href="#legacy">Legacy Planning</a></li>
-        <li><a href="#risk">Risk Advisory</a></li>
-        <li><a href="insights.html">Insights</a></li>
-        <li><a href="real-estate-insurance-california.html">Real Estate</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#contact" class="nav-cta">Contact Us</a></li>
-      </ul>
+    <li><a href="#legacy">Legacy Planning</a></li>
+    <li><a href="#risk">Risk Advisory</a></li>
+    <li><a href="insights.html">Insights</a></li>
+    <li><a href="real-estate-insurance-california.html">Real Estate</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
 </nav>
 
 <!-- HERO -->
@@ -777,41 +703,6 @@
         <p class="aside-statement">We don't just place policies.<br>We advise on risk.</p>
         <p class="aside-tagline">That's what we do. Structure. Protect. Implement.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- MISSION -->
-<section class="mission">
-  <div class="section-inner">
-    <div class="mission-grid">
-      <div>
-        <p class="section-eyebrow">Our Mission</p>
-        <blockquote class="mission-quote">"Most families don't get the inheritance conversation wrong because they don't care. They get it wrong because nobody ever walked them through it."</blockquote>
-      </div>
-      <div class="mission-text">
-        <p>That's what we do. <strong>We educate.</strong></p>
-
-        <p>We roll up our sleeves. Rexford works alongside business owners, healthcare operators, families, and real estate investors — aligning insurance and risk management with the way you actually operate.</p>
-        <p>Our clients come through family offices, CPAs, attorneys, and wealth managers who already have the relationship. We collaborate with the team and enjoy bringing the different pieces of the puzzle together.</p>
-        <p>Beyond insurance, our team brings 20 years of operating experience inside complex businesses across real estate, investment banking, family offices, and business development. Risk management was never optional. It was part of the job every single day.</p>
-        <p><strong>We don't just place policies. We advise on risk.</strong></p>
-      </div>
-    </div>
-    <div class="stat-row">
-      <div class="stat">
-        <div class="stat-number">20+</div>
-        <div class="stat-label">Years Operating</div>
-      </div>
-      <div class="stat">
-        <div class="stat-number">$2B+</div>
-        <div class="stat-label">Insured and Advised</div>
-      </div>
-      <div class="stat">
-        <div class="stat-number">3</div>
-        <div class="stat-label">Core Specialties</div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -1038,7 +929,6 @@
   </div>
 </section>
 
-
 <!-- INSIGHTS TEASER -->
 <section style="background: var(--cream); padding: 100px 60px;" id="insights">
   <div class="section-inner" style="text-align: center; margin: 0 auto; max-width: 700px;">
@@ -1048,7 +938,6 @@
     <a href="insights.html" class="btn-gold" style="display: inline-block; background: var(--navy); color: var(--warm-white); padding: 16px 40px; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.3s;">Read Our Insights →</a>
   </div>
 </section>
-
 
 <!-- AUDIT BANNER -->
 <div class="audit-banner">
@@ -1097,7 +986,6 @@
     this.classList.toggle('open');
     document.querySelector('nav ul').classList.toggle('open');
   });
-  // Close menu on link click
   document.querySelectorAll('nav ul a').forEach(function(link) {
     link.addEventListener('click', function() {
       document.querySelector('.hamburger').classList.remove('open');
