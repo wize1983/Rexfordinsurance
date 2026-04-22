@@ -57,15 +57,17 @@
     }
     .hero-inner {
       position: relative; max-width: 1200px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 420px; gap: 80px; align-items: center;
+      display: grid; grid-template-columns: 1fr 420px; gap: 80px; align-items: start;
     }
     .hero-text .eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
     .hero-text h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 5.5vw, 68px); font-weight: 300; color: var(--warm-white); line-height: 1.1; margin-bottom: 28px; }
     .hero-text h1 em { font-style: italic; color: var(--gold-light); }
-    .hero-text p { font-size: 17px; font-weight: 300; color: rgba(253,250,245,0.65); line-height: 1.85; max-width: 520px; }
+    .hero-text p { font-size: 17px; font-weight: 300; color: rgba(253,250,245,0.65); line-height: 1.85; max-width: 520px; margin-bottom: 18px; }
+    .hero-text p:last-child { margin-bottom: 0; }
+    .hero-text .hero-close { font-size: 12px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-top: 8px; }
     .hero-card {
       background: rgba(255,255,255,0.04); border: 1px solid rgba(201,168,76,0.2);
-      padding: 44px; position: relative;
+      padding: 44px; position: relative; position: sticky; top: 100px;
     }
     .hero-card::before {
       content: ''; position: absolute; top: 0; left: 0;
@@ -139,6 +141,7 @@
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; gap: 48px; }
       .market-grid { grid-template-columns: 1fr; }
+      .hero-card { position: static; }
     }
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
@@ -186,7 +189,13 @@
     <div class="hero-text">
       <p class="eyebrow">About Rexford Insurance Solutions</p>
       <h1>Built for the Gap Between<br><em>Policy and Reality</em></h1>
-      <p>Most insurance problems don't announce themselves at renewal. They surface at the worst possible moment — a claim, a passing, a transition — when the distance between what a policy says and what it actually does becomes painfully clear.</p>
+      <p>Most insurance problems don't show up at renewal. They show up when it matters most — a claim, a passing, a transition — when the distance between what a policy says and what it actually does becomes clear.</p>
+      <p>That gap is where things break.</p>
+      <p>Rexford was built to close it.</p>
+      <p>We work alongside ownership and their advisors to verify what's actually happening, not just what's on paper. We observe operations, report back on potential challenges, and help ensure everything is aligned before issues turn into claims.</p>
+      <p>On the planning side, we guide clients through life insurance, annuities, and trust structures, working together to determine the right path forward and ensure plans are implemented properly.</p>
+      <p>We don't just place policies. We advise, structure, and implement — with a preventive focus.</p>
+      <p class="hero-close">Advise. Structure. Implement. &nbsp;·&nbsp; Call us when something doesn't add up.</p>
     </div>
     <div class="hero-card">
       <p class="card-name">Jonathan Perles</p>
