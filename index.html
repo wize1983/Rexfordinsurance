@@ -653,6 +653,13 @@
   .aside-tagline { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); padding-left: 24px; }
   @media (max-width: 900px) { .what-we-do-grid { grid-template-columns: 1fr; gap: 40px; } .what-we-do-aside { position: static; } }
   @media (max-width: 768px) { .what-we-do { padding: 60px 24px; } }
+
+/* --- T-Rex chase loop behind the hero (added) --- */
+.hero{position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:0;pointer-events:none;}
+.hero-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(13,27,42,.70),rgba(13,27,42,.42) 45%,rgba(13,27,42,.82));}
+.hero>*:not(.hero-bg):not(.hero-scrim){position:relative;z-index:2;}
 </style>
 </head>
 <body>
@@ -674,6 +681,8 @@
 
 <!-- HERO -->
 <section class="hero">
+  <iframe class="hero-bg" src="trex-hero-bg.html" title="A T-Rex chasing an ibex across the mountains" aria-hidden="true" tabindex="-1" scrolling="no" loading="lazy"></iframe>
+  <div class="hero-scrim" aria-hidden="true"></div>
   <p class="hero-eyebrow">Rexford Insurance Solutions</p>
   <h1 class="hero-hook">The Risk Management Arm<br>You Never Knew <em>You Needed.</em></h1>
   <p class="hero-sub">We advise families, the businesses they operate, and their commercial real estate on legacy planning and complex commercial risk — coordinated, proactive, and built around you.</p>
