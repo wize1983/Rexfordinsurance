@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rexford — T-Rex chase (hero background)</title>
+<style>
+  :root{ --navy-deep:#0D1B2A; --magenta-light:#e94fd6; --loop-seconds:8s; }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{height:100%;background:var(--navy-deep);overflow:hidden;}
+  #hero{position:relative;width:100vw;height:100vh;overflow:hidden;}
+  #bg{position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(60% 55% at 50% 52%, rgba(231,79,214,.13), transparent 70%),
+      linear-gradient(180deg,#1a2b40 0%, #122033 45%, #0D1B2A 100%);
+  }
+  #mountains{position:absolute;inset:0;opacity:.5;z-index:1;}
+
+  .track{position:absolute;left:0;right:0;bottom:12vh;height:56vh;z-index:2;pointer-events:none;}
+  .pack{position:absolute;bottom:0;left:0;height:100%;width:1040px;
+    animation:chase var(--loop-seconds) linear infinite;animation-play-state:paused;}
+  .pack.go{animation-play-state:running;}
+  /* RIGHT-TO-LEFT travel (animals face left). To reverse, swap the two translateX values. */
+  @keyframes chase{ from{ transform:translateX(100vw);} to{ transform:translateX(-1080px);} }
+  .viewer{position:absolute;bottom:0;
+    -webkit-mask:radial-gradient(ellipse 60% 64% at 50% 46%, #000 52%, transparent 78%);
+            mask:radial-gradient(ellipse 60% 64% at 50% 46%, #000 52%, transparent 78%);}
+  .viewer iframe{width:100%;height:100%;border:0;display:block;background:transparent;}
+  .viewer.ibex{left:0;   width:440px;height:78%;transition:opacity .6s ease;}
+  .viewer.trex{left:330px;width:660px;height:100%;}
+  body.feast .viewer.ibex{opacity:0;}   /* "caught" loop: ibex gone, T-Rex roars */
+
+  @media (max-width:760px){
+    .pack{width:760px;} .viewer.trex{left:240px;width:480px;} .viewer.ibex{width:320px;}
+  }
+</style>
+</head>
+<body>
+<div id="hero">
+  <div id="bg"></div>
+  <svg id="mountains" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="0,900 0,500 230,290 430,460 620,240 820,510 980,350 1180,560 1440,320 1440,900" fill="#22384f"/>
+    <polygon points="700,900 980,410 1140,560 1280,420 1440,580 1440,900" fill="#1b2c40"/>
+    <polygon points="0,900 0,640 260,470 470,640 640,520 0,900" fill="#152436"/>
+  </svg>
+
+  <div class="track">
+    <div class="pack">
+      <div class="viewer ibex"><iframe id="ibex-frame" title="Ibex" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div>
+      <div class="viewer trex"><iframe id="trex-frame" title="Tyrannosaurus Rex" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
+<script>
+(function(){
+  var pack = document.querySelector('.pack');
+  var ready = 0, started = false, trex = null;
+  function startChase(){ if(started) return; started = true; document.body.classList.remove('feast'); void pack.offsetWidth; pack.classList.add('go'); }
+  function onReady(){ if(++ready >= 2) startChase(); }
+  setTimeout(startChase, 7000);
+
+  function playClip(api, uid){ api.setCurrentAnimationByUID(uid, function(){ try{ api.setCycleMode('loopOne'); }catch(e){} api.play(); }); }
+
+  function loadRunner(iframeId, uid, prefer, isTrex){
+    var iframe = document.getElementById(iframeId);
+    var client = new Sketchfab('1.12.1', iframe);
+    client.init(uid, {
+      autostart:1, transparent:1, ui_controls:0, ui_infos:0, ui_stop:0, ui_watermark:0,
+      ui_hint:0, ui_ar:0, ui_vr:0, ui_fullscreen:0, autospin:0, scrollwheel:0, dnt:1,
+      success:function(api){
+        api.start();
+        api.addEventListener('viewerready', function(){
+          api.getAnimations(function(err, animations){
+            if(!err && animations && animations.length){
+              function find(re){ for(var i=0;i<animations.length;i++){ if(re.test(animations[i][1])) return animations[i][0]; } return null; }
+              var runUid = find(prefer) || find(/run|sprint|gallop|trot|jog/i) || find(/walk/i) || animations[Math.min(1,animations.length-1)][0];
+              if(isTrex){ var roarUid = find(/roar|bite|attack|bellow|scream/i) || runUid; trex = {api:api, run:runUid, roar:roarUid}; }
+              playClip(api, runUid);
+            }
+            onReady();
+          });
+        });
+      },
+      error:function(){ onReady(); }
+    });
+  }
+
+  loadRunner('ibex-frame', '9824a8516bab48d88d288801c008c06d', /run|sprint|gallop/i, false);
+  loadRunner('trex-frame', '38007d947ae74dea83988cb0b08ee053', /run/i, true);
+
+  var loops = 0;
+  pack.addEventListener('animationiteration', function(){
+    loops++;
+    var caught = (loops % 2 === 1);
+    document.body.classList.toggle('feast', caught);
+    if(trex){ playClip(trex.api, caught ? trex.roar : trex.run); }
+  });
+})();
+</script>
+</body>
+</html>
