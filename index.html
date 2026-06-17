@@ -653,6 +653,9 @@
   .aside-tagline { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); padding-left: 24px; }
   @media (max-width: 900px) { .what-we-do-grid { grid-template-columns: 1fr; gap: 40px; } .what-we-do-aside { position: static; } }
   @media (max-width: 768px) { .what-we-do { padding: 60px 24px; } }
+  .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 60px; padding-top: 48px; border-top: 1px solid var(--light-gray); }
+  .services-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--navy); margin-bottom: 20px; }
+  @media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; gap: 36px; } }
 
 /* --- T-Rex chase loop band --- */
 .hero-loop{ width:100%; max-width:1100px; height:42vh; min-height:300px; margin:8px auto 44px;
@@ -730,12 +733,45 @@
     <h2>We Work With You.<br><em>Start to Finish.</em></h2>
     <div class="what-we-do-grid">
       <div class="what-we-do-text">
-        <p>We help business owners, family offices, boards, and nonprofits spot risk and close gaps before they become problems. And we help families protect what they've built — structuring life insurance, annuities, and trust planning so everything transfers as intended, working alongside your advisors or assembling the right team.</p>
+        <p>We help business owners, family offices, boards, and nonprofits identify risk, close coverage gaps, and protect what they've built before problems arise.</p>
+        <p>We also help families create long-term protection strategies — structuring life insurance, annuities, and trust-based planning to help preserve wealth and transfer assets as intended, while coordinating with your existing advisors or assembling the right team.</p>
       </div>
       <div class="what-we-do-aside">
         <p class="section-eyebrow" style="margin-bottom: 20px;">How We're Different</p>
         <p class="aside-statement">We operate at the intersection of advisory and insurance. Most insurance is placed based on what's on paper. We focus on what's actually happening. We don't just place policies. We advise.</p>
         <p class="aside-tagline">Call us when something doesn't add up.</p>
+      </div>
+    </div>
+
+    <div class="services-grid">
+      <div class="services-col">
+        <h3 class="services-title">Business Risk &amp; Insurance Solutions</h3>
+        <ul class="products-list">
+          <li>Commercial Property &amp; Liability</li>
+          <li>General Liability (GL)</li>
+          <li>Professional Liability (E&amp;O)</li>
+          <li>Directors &amp; Officers Liability (D&amp;O)</li>
+          <li>Fiduciary Liability</li>
+          <li>Employment Practices Liability (EPLI)</li>
+          <li>Workers' Compensation</li>
+          <li>Commercial Auto &amp; Fleet</li>
+          <li>Group Auto Programs</li>
+          <li>Cyber &amp; Specialty Risk Solutions</li>
+          <li>Employee Benefits &amp; Group Health</li>
+          <li>Risk Management &amp; Claims Strategy</li>
+        </ul>
+      </div>
+      <div class="services-col">
+        <h3 class="services-title">Personal Protection &amp; Legacy Planning</h3>
+        <ul class="products-list">
+          <li>Term Life Insurance</li>
+          <li>Whole Life Insurance</li>
+          <li>Indexed Universal Life (IUL)</li>
+          <li>Long-Term Care Planning</li>
+          <li>Disability Income Protection</li>
+          <li>Fixed &amp; Indexed Annuities</li>
+          <li>Trust &amp; Estate Planning Coordination</li>
+        </ul>
       </div>
     </div>
   </div>
