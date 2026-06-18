@@ -304,6 +304,10 @@
   .path-section.dark .solution-label { color: var(--gold); }
   .path-section.dark .solution-text { color: rgba(253,250,245,0.75); }
   .path-section.dark .products-list li { color: rgba(253,250,245,0.7); border-color: rgba(201,168,76,0.2); }
+  .ibex-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 56px; padding-top: 48px; border-top: 1px solid rgba(201,168,76,0.2); }
+  .ibex-col-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; color: var(--warm-white); margin-bottom: 6px; }
+  .ibex-col-quote { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; color: var(--gold-light); margin-bottom: 22px; }
+  @media (max-width: 768px) { .ibex-cols { grid-template-columns: 1fr; gap: 36px; } }
 
   .problems-grid {
     display: grid;
@@ -849,6 +853,35 @@
       <li style="position:relative; padding-left:26px; margin-bottom:0; font-size:16px; font-weight:300; line-height:1.6; color:rgba(253,250,245,0.78);"><span style="position:absolute; left:0; color:var(--gold);">▸</span>Create a roadmap to reduce risk and protect the business</li>
     </ul>
     <p class="section-body" style="margin-top: 20px; color: var(--gold);">Because the best time to fix a risk is before it becomes a loss.</p>
+
+    <div class="ibex-cols">
+      <div class="ibex-col">
+        <h3 class="ibex-col-title">IBEX Risk Management</h3>
+        <p class="ibex-col-quote">"Find the risks others miss."</p>
+        <ul class="products-list">
+          <li>Risk Assessments</li>
+          <li>Claims Analytics</li>
+          <li>Safety &amp; Loss Prevention</li>
+          <li>Compliance</li>
+          <li>Vendor Oversight</li>
+          <li>Rexford.ai</li>
+          <li>Operational Risk</li>
+        </ul>
+      </div>
+      <div class="ibex-col">
+        <h3 class="ibex-col-title">IBEX Insurance Solutions</h3>
+        <p class="ibex-col-quote">"Transfer the risks you can't eliminate."</p>
+        <ul class="products-list">
+          <li>Commercial Property</li>
+          <li>General Liability</li>
+          <li>Workers' Comp</li>
+          <li>EPLI</li>
+          <li>D&amp;O</li>
+          <li>Cyber</li>
+          <li>Specialty / Hard-to-Place Risks</li>
+        </ul>
+      </div>
+    </div>
 
     <div class="problems-grid">
       <div class="problem-card">
