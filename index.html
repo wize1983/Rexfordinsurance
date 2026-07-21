@@ -167,6 +167,24 @@
 
   .hero-method { font-size: 13px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-top: 28px; position: relative; }
 
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: rgba(253,250,245,0.55);
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.8s;
+  }
+
+  .hero-trust span:first-child { color: var(--gold); }
+
+  .hero-trust-divider { color: rgba(201,168,76,0.4); }
+
   .hero-paths {
     display: flex;
     gap: 20px;
@@ -220,15 +238,16 @@
 
   .path-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 400;
     color: var(--warm-white);
-    line-height: 1.2;
+    line-height: 1.25;
     margin-bottom: 8px;
   }
 
   .path-desc {
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: 300;
     color: rgba(253,250,245,0.5);
     line-height: 1.5;
   }
@@ -661,15 +680,6 @@
   .services-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--navy); margin-bottom: 20px; }
   @media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; gap: 36px; } }
 
-/* --- T-Rex chase loop band --- */
-.hero-loop{ width:100%; max-width:1100px; height:42vh; min-height:300px; margin:8px auto 44px;
-  border-radius:14px; overflow:hidden; border:1px solid rgba(201,168,76,0.25);
-  box-shadow:0 18px 50px rgba(0,0,0,0.35); position:relative; z-index:1; cursor:default;
-  opacity:0; animation:fadeUp 0.8s ease forwards 0.1s; }
-.hero-loop-static{ position:absolute; inset:-4%; background:#0D1B2A url('trex-hero-mobile.jpg') center/cover no-repeat;
-  animation:heroPan 22s ease-in-out infinite alternate; will-change:transform; }
-@keyframes heroPan{ 0%{ transform:scale(1.06) translate3d(1.2%,0.4%,0); } 100%{ transform:scale(1.13) translate3d(-2.4%,-0.8%,0); } }
-@media (prefers-reduced-motion:reduce){ .hero-loop-static{ animation:none; inset:0; } }
 </style>
 </head>
 <body>
@@ -692,28 +702,33 @@
 <!-- HERO -->
 <section class="hero">
   <p class="hero-eyebrow">Rexford Insurance Solutions</p>
-  <h1 class="hero-hook">Got <em>Insurance</em>?</h1>
-  <p class="hero-method" style="color:#e94fd6; font-size:clamp(34px,5.4vw,64px); font-weight:700; letter-spacing:0.06em;">Watch out for the T-Rex</p>
-  <p class="hero-sub">We uncover hidden risks, close gaps, and protect what you've built.</p>
-  <div class="hero-loop">
-    <div class="hero-loop-static" role="img" aria-label="A T-Rex chasing an ibex across the mountains"></div>
+  <h1 class="hero-hook">Most policies look fine <em>until they're tested.</em></h1>
+  <p class="hero-sub">We find the gaps in your coverage before a claim does — for families protecting a legacy and business owners protecting what they've built.</p>
+  <p class="hero-tagline">Education first. Insurance second.</p>
+  <div class="hero-trust">
+    <span>★★★★★ 5.0 on Google</span>
+    <span class="hero-trust-divider">·</span>
+    <span>California-Based</span>
+    <span class="hero-trust-divider">·</span>
+    <span>Lic. 6017874</span>
   </div>
-  <p class="hero-tagline" style="color:#e94fd6;">The T-Rex is everywhere.</p>
-  <p class="hero-sub">We advise families with life insurance and annuities. We place hard-to-place risk on business operations and complex commercial property insurance.</p>
   <div class="hero-paths">
     <a href="#legacy" class="path-btn">
-      <span class="path-title">T-Rex Division</span>
-      <span class="path-desc">Life insurance &amp; annuities for families and business owners</span>
+      <span class="path-label">Legacy Planning</span>
+      <span class="path-title">Families &amp; Business Owners</span>
+      <span class="path-desc">Life insurance &amp; annuities structured around your estate</span>
       <span class="path-arrow">→</span>
     </a>
     <a href="#risk" class="path-btn">
-      <span class="path-title">Ibex Division</span>
-      <span class="path-desc">Insuring hard-to-place risk for owners managing complex, compliance-driven risk</span>
+      <span class="path-label">Risk Advisory</span>
+      <span class="path-title">Commercial &amp; Hard-to-Place Risk</span>
+      <span class="path-desc">Insurance programs for owners managing complex, compliance-driven exposure</span>
       <span class="path-arrow">→</span>
     </a>
     <a href="employee-benefits.html" class="path-btn">
-      <span class="path-title">The Felix Division</span>
-      <span class="path-desc">Employee benefits — insuring growing businesses serving their people with healthcare coverage</span>
+      <span class="path-label">Employee Benefits</span>
+      <span class="path-title">Growing Businesses</span>
+      <span class="path-desc">Healthcare coverage built to support your team as you scale</span>
       <span class="path-arrow">→</span>
     </a>
   </div>
@@ -814,8 +829,8 @@
     <div class="path-header">
       <span class="path-badge">Path One</span>
     </div>
-    <p class="section-eyebrow">The T-Rex — Legacy Planning</p>
-    <h2 class="section-title">The T-Rex is all around us.<br><em>Make sure your family legacy is protected.</em></h2>
+    <p class="section-eyebrow">Legacy Planning</p>
+    <h2 class="section-title">Risk is all around us.<br><em>Make sure your family legacy is protected.</em></h2>
     <p class="section-body">Unexpected risks, market changes, taxes, and life events. We design customized Life Insurance, Annuity, Disability, and Long-Term Care strategies to help protect what matters most.</p>
 
     <div class="problems-grid">
@@ -876,12 +891,12 @@
     <div class="path-header">
       <span class="path-badge light">Path Two</span>
     </div>
-        <p class="section-eyebrow">IBEX — Risk Advisory &amp; Commercial Insurance</p>
+        <p class="section-eyebrow">Risk Advisory &amp; Commercial Insurance</p>
     <h2 class="section-title" style="color: #ffffff;">Most business owners discover their biggest risks<br><em>after something goes wrong.</em></h2>
-    <p class="section-body">IBEX — Integrated Business Exposure Management — helps growing businesses identify, manage, and protect against the risks that can disrupt their operations, employees, and financial future.</p>
+    <p class="section-body">Our risk advisory practice helps growing businesses identify, manage, and protect against the risks that can disrupt their operations, employees, and financial future.</p>
     <p class="section-body" style="margin-top: 20px;">We work with business owners across real estate, healthcare, assisted living and skilled nursing, hospitality, professional services, and operating companies to design insurance programs that fit how their business actually runs.</p>
     <p class="section-body" style="margin-top: 20px;">Insurance is only part of the solution. The real risk often comes from gaps in operations — vendor issues, employee exposures, compliance concerns, contracts, and processes that were never fully addressed.</p>
-    <p class="section-body" style="margin-top: 20px;">Through a practical risk review, IBEX helps business owners:</p>
+    <p class="section-body" style="margin-top: 20px;">Through a practical risk review, we help business owners:</p>
     <ul style="list-style:none; margin:20px 0 8px; padding:0; max-width:640px;">
       <li style="position:relative; padding-left:26px; margin-bottom:12px; font-size:16px; font-weight:300; line-height:1.6; color:rgba(253,250,245,0.78);"><span style="position:absolute; left:0; color:var(--gold);">▸</span>Identify hidden exposures before they become claims</li>
       <li style="position:relative; padding-left:26px; margin-bottom:12px; font-size:16px; font-weight:300; line-height:1.6; color:rgba(253,250,245,0.78);"><span style="position:absolute; left:0; color:var(--gold);">▸</span>Review insurance coverage and gaps</li>
@@ -892,7 +907,7 @@
 
     <div class="ibex-cols">
       <div class="ibex-col">
-        <h3 class="ibex-col-title">IBEX Risk Management</h3>
+        <h3 class="ibex-col-title">Risk Management</h3>
         <p class="ibex-col-quote">"Find the risks others miss."</p>
         <ul class="products-list">
           <li>Risk Assessments</li>
@@ -905,7 +920,7 @@
         </ul>
       </div>
       <div class="ibex-col">
-        <h3 class="ibex-col-title">IBEX Insurance Solutions</h3>
+        <h3 class="ibex-col-title">Insurance Solutions</h3>
         <p class="ibex-col-quote">"Transfer the risks you can't eliminate."</p>
         <ul class="products-list">
           <li>Commercial Property</li>
