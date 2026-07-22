@@ -15,19 +15,19 @@
   <meta name="description" content="The most dangerous version of indecision fatigue isn't the meeting that never ends. It's the life insurance conversation that never starts." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy: #0d1b2a;
-      --navy-mid: #1a2e42;
-      --gold: #b8960c;
-      --gold-light: #d4a017;
-      --cream: #f9f6f0;
-      --text: #1c1c1c;
-      --muted: #5a5a5a;
-      --border: #e0d9ce;
+      --navy: #10233F;
+      --navy-mid: #1D5AA3;
+      --gold: #F0C24B;
+      --gold-light: #F5D479;
+      --cream: #F7F9FC;
+      --text: #1F2937;
+      --muted: #4B5563;
+      --border: #E5E7EB;
       --white: #ffffff;
     }
 
@@ -55,12 +55,23 @@
     }
 
     nav a.logo {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Lora', serif;
       font-size: 1.15rem;
       color: var(--white);
       text-decoration: none;
       letter-spacing: 0.02em;
     }
+
+    nav a.logo span { color: var(--gold); }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--navy) !important;
+      padding: 8px 18px;
+      border-radius: 2px;
+    }
+
+    .nav-cta:hover { background: var(--gold-light) !important; }
 
     nav ul {
       list-style: none;
@@ -125,7 +136,7 @@
     }
 
     .article-header h1 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Lora', serif;
       font-size: clamp(2rem, 4vw, 2.75rem);
       font-weight: 600;
       line-height: 1.2;
@@ -160,7 +171,7 @@
     }
 
     .article-body h2 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Lora', serif;
       font-size: 1.5rem;
       font-weight: 600;
       color: var(--navy);
@@ -203,7 +214,7 @@
     }
 
     .scenario h3 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Lora', serif;
       font-size: 1.05rem;
       font-weight: 600;
       color: var(--navy);
@@ -223,7 +234,7 @@
       border-bottom: 2px solid var(--gold);
       margin: 2.75rem 0;
       padding: 1.75rem 0;
-      font-family: 'Playfair Display', serif;
+      font-family: 'Lora', serif;
       font-size: 1.3rem;
       font-style: italic;
       color: var(--navy);
@@ -241,7 +252,7 @@
     }
 
     .diagnostic h3 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Lora', serif;
       font-size: 1.1rem;
       font-weight: 600;
       color: var(--gold-light);
@@ -292,7 +303,7 @@
     }
 
     .cta-block h2 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Lora', serif;
       font-size: 1.4rem;
       color: var(--navy);
       margin: 0 0 0.6rem !important;
@@ -353,16 +364,16 @@
       font-size: 0.82rem;
     }
 
-    footer a {
+    footer .logo {
       color: rgba(255,255,255,0.85);
       text-decoration: none;
-      font-family: 'Playfair Display', serif;
+      font-family: 'Lora', serif;
       font-size: 0.95rem;
       display: block;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
     }
 
-    footer a:hover { color: var(--gold-light); }
+    footer p { margin: 0.25rem 0; }
 
     @media (max-width: 600px) {
       nav ul { gap: 1rem; }
@@ -377,9 +388,9 @@
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     @media (max-width: 768px) {
       .hamburger { display: flex; }
-      nav ul { display: none; flex-direction: column; position: fixed; top: 57px; left: 0; right: 0; background: rgba(253,250,245,0.98); backdrop-filter: blur(10px); padding: 24px 32px 32px; gap: 0; border-bottom: 1px solid var(--light-gray); z-index: 100; }
+      nav ul { display: none; flex-direction: column; position: fixed; top: 57px; left: 0; right: 0; background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); padding: 24px 32px 32px; gap: 0; border-bottom: 1px solid var(--border); z-index: 100; }
       nav ul.open { display: flex; }
-      nav ul li { border-bottom: 1px solid var(--light-gray); }
+      nav ul li { border-bottom: 1px solid var(--border); }
       nav ul li:last-child { border-bottom: none; }
       nav ul a { display: block; padding: 16px 0; font-size: 14px; }
       nav ul a.nav-cta { background: none; color: var(--navy) !important; padding: 16px 0; border-radius: 0; }
@@ -390,29 +401,27 @@
 
   <!-- NAV -->
   <nav>
-    <a class="logo" href="https://rexfordinsurance.com/index.html">Rexford Insurance</a>
+    <a class="logo" href="index.html">Rexford <span>Insurance</span></a>
     <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul>
-      <li><a href="https://rexfordinsurance.com/index.html#legacy">Legacy Planning</a></li>
-      <li><a href="https://rexfordinsurance.com/index.html#risk">Risk Advisory</a></li>
-      <li><a href="https://rexfordinsurance.com/insights.html">Insights</a></li>
-      <li><a href="https://rexfordinsurance.com/real-estate-insurance-california.html">Real Estate</a></li>
-      <li><a href="https://rexfordinsurance.com/about.html">About</a></li>
-      <li><a href="https://rexfordinsurance.com/index.html#contact">Contact Us</a></li>
+      <li><a href="index.html#life">Life Insurance</a></li>
+      <li><a href="index.html#annuities">Annuities</a></li>
+      <li><a href="insights.html">Insights</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Get Started</a></li>
     </ul>
   </nav>
 
   <!-- BREADCRUMB -->
   <div class="breadcrumb">
-    <a href="https://rexfordinsurance.com/insights.html">Insights</a>
-    <span>/</span>Business Owners · Legacy Planning
+    <a href="insights.html">Insights</a>
+    <span>/</span>Life Insurance
   </div>
 
   <!-- ARTICLE HEADER -->
   <header class="article-header">
     <div class="tags">
-      <span class="tag">Business Owners</span>
-      <span class="tag">Legacy Planning</span>
+      <span class="tag">Life Insurance</span>
     </div>
     <h1>Indecision Fatigue Is Costing Your Business — But the <em>Most Expensive Version Is Personal</em></h1>
     <p class="byline">Rexford Insurance Solutions</p>
@@ -514,9 +523,9 @@
     <p class="signature">— Rexford Insurance Solutions</p>
 
     <div class="cta-block">
-      <h2>Start With a Free Risk Audit</h2>
+      <h2>Complimentary Policy Review</h2>
       <p>No obligation. No pitch. Just a clear look at what you have — and where the gaps are.</p>
-      <a class="cta-btn" href="https://rexfordinsurance.com/index.html#contact">Request Your Free Audit</a>
+      <a class="cta-btn" href="index.html#contact">Request Your Free Review</a>
     </div>
 
   </article>
@@ -533,10 +542,9 @@
 
   <!-- FOOTER -->
   <footer>
-    <a href="https://rexfordinsurance.com/index.html">Rexford Insurance</a>
-    Rexford Insurance Solutions &nbsp;|&nbsp; California &nbsp;|&nbsp; Lic. 6017874
-    <br /><br />
-    © 2026 Rexford Insurance Solutions
+    <a href="index.html" class="logo" style="color: var(--white);">Rexford <span>Insurance</span></a>
+    <p>Rexford Insurance Solutions &nbsp;|&nbsp; California &nbsp;|&nbsp; Lic. 6017874</p>
+    <p style="color: rgba(255,255,255,0.3); font-size: 11px;">&copy; 2026 Rexford Insurance Solutions</p>
   </footer>
 
 <script>
