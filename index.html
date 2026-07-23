@@ -325,6 +325,24 @@ section { padding: 60px 24px; }
 </select>
 </div>
 <div class="finder-field">
+<label>Coverage Amount to Insure</label>
+<select id="f-coverage-amount">
+<option value="1-5">$1M – $5M</option>
+<option value="5-10">$5M – $10M</option>
+<option value="10-25">$10M – $25M</option>
+<option value="25-50">$25M – $50M</option>
+</select>
+</div>
+<div class="finder-field">
+<label>Annuity Allocation Amount</label>
+<select id="f-annuity-amount">
+<option value="25k-100k">$25K – $100K</option>
+<option value="100k-500k">$100K – $500K</option>
+<option value="500k-1m">$500K – $1M</option>
+<option value="1m-5m">$1M – $5M</option>
+</select>
+</div>
+<div class="finder-field">
 <label>Timeline</label>
 <select id="f-timeline">
 <option value="starting">Just starting out</option>
@@ -570,6 +588,8 @@ dependents: {no:'No dependents', yes:'Has dependents'},
 business: {no:'No', yes:'Yes'},
 coverage: {none:'No coverage', outdated:'Outdated coverage', current:'Up to date'},
 goal: {protect:"Protect family's income", income:'Guarantee retirement income', legacy:'Protect & transfer wealth', business:'Protect business'},
+coverageAmount: {'1-5':'$1M–$5M','5-10':'$5M–$10M','10-25':'$10M–$25M','25-50':'$25M–$50M'},
+annuityAmount: {'25k-100k':'$25K–$100K','100k-500k':'$100K–$500K','500k-1m':'$500K–$1M','1m-5m':'$1M–$5M'},
 timeline: {starting:'Just starting out', building:'Building wealth', approaching:'Approaching retirement', retired:'Already retired'}
 };
 
@@ -587,6 +607,7 @@ primary = 'Buy-Sell & Key Executive Life Insurance';
 blurb = "With a business in the picture, coverage usually needs to protect the business itself first — buy-sell agreements and key-person coverage — before personal planning layers on top.";
 secondary.push('Trust & Estate Planning Coordination');
 if (a.coverage === 'outdated') secondary.push('Complimentary Policy Review');
+if (a.coverageAmount === '25-50') secondary.push('Premium Finance');
 } else if (a.goal === 'legacy') {
 primary = (a.age === '51-65' || a.age === '65+') ? 'Indexed Universal Life (IUL)' : 'Whole Life Insurance';
 blurb = "For wealth transfer, permanent coverage builds cash value and creates a tax-efficient way to pass wealth on — paired with the right trust and beneficiary structure.";
@@ -594,6 +615,7 @@ secondary.push('Trust & Estate Planning Coordination');
 if (a.status === 'married') secondary.push('SLAT (Spousal Lifetime Access Trust)');
 if (a.age === '51-65' || a.age === '65+') secondary.push('IRA-to-Life-Insurance Strategy');
 if (a.status === 'married' && (a.age==='51-65'||a.age==='65+')) secondary.push('Fixed & Indexed Annuities');
+if (a.coverageAmount === '25-50') secondary.push('Premium Finance');
 } else {
 if (a.coverage === 'outdated') {
 primary = 'Complimentary Policy Review';
@@ -620,6 +642,8 @@ dependents: document.getElementById('f-dependents').value,
 business: document.getElementById('f-business').value,
 coverage: document.getElementById('f-coverage').value,
 goal: document.getElementById('f-goal').value,
+coverageAmount: document.getElementById('f-coverage-amount').value,
+annuityAmount: document.getElementById('f-annuity-amount').value,
 timeline: document.getElementById('f-timeline').value
 };
 var r = recommend(a);
@@ -627,7 +651,7 @@ document.getElementById('finderPrimary').textContent = r.primary;
 document.getElementById('finderBlurb').textContent = r.blurb;
 var secEl = document.getElementById('finderSecondary');
 secEl.innerHTML = r.secondary.length ? ('<strong>Also worth a look:</strong> ' + r.secondary.join(', ')) : '';
-var summary = 'Age: ' + labels.age[a.age] + ' | Status: ' + labels.status[a.status] + ' | Dependents: ' + labels.dependents[a.dependents] + ' | Business owner: ' + labels.business[a.business] + ' | Coverage: ' + labels.coverage[a.coverage] + ' | Goal: ' + labels.goal[a.goal] + ' | Timeline: ' + labels.timeline[a.timeline] + ' | Recommended: ' + r.primary + (r.secondary.length ? (' + ' + r.secondary.join(', ')) : '');
+var summary = 'Age: ' + labels.age[a.age] + ' | Status: ' + labels.status[a.status] + ' | Dependents: ' + labels.dependents[a.dependents] + ' | Business owner: ' + labels.business[a.business] + ' | Coverage: ' + labels.coverage[a.coverage] + ' | Goal: ' + labels.goal[a.goal] + ' | Coverage Amount: ' + labels.coverageAmount[a.coverageAmount] + ' | Annuity Allocation: ' + labels.annuityAmount[a.annuityAmount] + ' | Timeline: ' + labels.timeline[a.timeline] + ' | Recommended: ' + r.primary + (r.secondary.length ? (' + ' + r.secondary.join(', ')) : '');
 document.getElementById('finderSummary').value = summary;
 document.getElementById('finderResult').classList.add('show');
 document.getElementById('finderResult').scrollIntoView({behavior:'smooth', block:'nearest'});
