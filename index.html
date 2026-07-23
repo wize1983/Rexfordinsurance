@@ -259,6 +259,8 @@ section { padding: 60px 24px; }
 <li>Whole Life Insurance</li>
 <li>Indexed Universal Life (IUL)</li>
 <li>Fixed &amp; Indexed Annuities</li>
+<li>IRA/401(k) Rollover Annuities</li>
+<li>QLAC (Qualified Longevity Annuity Contract)</li>
 <li>Long-Term Care Planning</li>
 <li>Disability Income Protection</li>
 <li>Trust &amp; Estate Planning Coordination</li>
@@ -442,9 +444,13 @@ section { padding: 60px 24px; }
 <li>Term Life</li>
 <li>Retirement Annuities</li>
 <li>Guaranteed Income</li>
+<li>IRA/401(k) Rollover Annuities</li>
+<li>QLAC (Qualified Longevity Annuity Contract)</li>
 <li>Disability Income Protection</li>
 <li>Long-Term Care Planning</li>
 <li>Gift Strategy</li>
+<li>SLAT (Spousal Lifetime Access Trust)</li>
+<li>IRA-to-Life-Insurance Strategy</li>
 <li>Special Needs Trust</li>
 <li>Foreign Nationals</li>
 <li>Living Trust</li>
@@ -573,7 +579,8 @@ var primary, blurb;
 if (a.goal === 'income' || a.timeline === 'retired') {
 primary = 'Fixed & Indexed Annuities';
 blurb = "Since guaranteed retirement income is the priority, a fixed or indexed annuity is usually the starting point — it converts savings into income you can't outlive.";
-if (a.age === '51-65' || a.age === '65+') secondary.push('Long-Term Care Planning');
+secondary.push('IRA/401(k) Rollover Annuities');
+if (a.age === '51-65' || a.age === '65+') { secondary.push('QLAC (Qualified Longevity Annuity Contract)'); secondary.push('Long-Term Care Planning'); }
 if (a.dependents === 'yes' || a.status === 'married') secondary.push('Trust & Estate Planning Coordination');
 } else if (a.goal === 'business' || a.business === 'yes') {
 primary = 'Buy-Sell & Key Executive Life Insurance';
@@ -584,6 +591,8 @@ if (a.coverage === 'outdated') secondary.push('Complimentary Policy Review');
 primary = (a.age === '51-65' || a.age === '65+') ? 'Indexed Universal Life (IUL)' : 'Whole Life Insurance';
 blurb = "For wealth transfer, permanent coverage builds cash value and creates a tax-efficient way to pass wealth on — paired with the right trust and beneficiary structure.";
 secondary.push('Trust & Estate Planning Coordination');
+if (a.status === 'married') secondary.push('SLAT (Spousal Lifetime Access Trust)');
+if (a.age === '51-65' || a.age === '65+') secondary.push('IRA-to-Life-Insurance Strategy');
 if (a.status === 'married' && (a.age==='51-65'||a.age==='65+')) secondary.push('Fixed & Indexed Annuities');
 } else {
 if (a.coverage === 'outdated') {
