@@ -91,11 +91,11 @@ section { padding: 88px 48px; }
 .bg-tint { background: var(--tint); }
 
 /* PILLARS */
-.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 48px; }
-.pillar { background: var(--tint); border-radius: 6px; padding: 30px; }
+.pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+.pillar { background: var(--tint); border-radius: 6px; padding: 26px; }
 .pillar-icon { width: 40px; height: 40px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Lora', serif; font-size: 16px; margin-bottom: 16px; }
-.pillar h3 { font-size: 18px; color: var(--navy); margin-bottom: 10px; font-weight: 600; }
-.pillar p { font-size: 14.5px; color: var(--gray-text); line-height: 1.6; }
+.pillar h3 { font-size: 17px; color: var(--navy); margin-bottom: 10px; font-weight: 600; }
+.pillar p { font-size: 14px; color: var(--gray-text); line-height: 1.6; }
 
 /* PRODUCTS LIST */
 .products-list { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; }
@@ -177,12 +177,16 @@ footer { background: var(--tint); padding: 36px 48px; border-top: 1px solid var(
 
 @media (max-width: 900px) {
 .hero-panel { margin: 0 20px; max-width: none; }
-.split, .pillars { grid-template-columns: 1fr; }
+.split { grid-template-columns: 1fr; }
+.pillars { grid-template-columns: 1fr 1fr; }
 nav ul { display: none; }
 .hamburger { display: flex; }
 .tab-strip { gap: 24px; flex-wrap: wrap; }
 .footer-row { flex-direction: column; gap: 10px; text-align: center; }
 section { padding: 60px 24px; }
+}
+@media (max-width: 560px) {
+.pillars { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -247,6 +251,11 @@ section { padding: 60px 24px; }
 <div class="pillar-icon">A</div>
 <h3>Annuities &amp; Guaranteed Income</h3>
 <p>Fixed and indexed annuities structured around a long-term retirement and wealth transfer plan.</p>
+</div>
+<div class="pillar">
+<div class="pillar-icon">R</div>
+<h3>Retirement Income Planning</h3>
+<p>Coordinating Social Security, required distributions, and guaranteed income sources into one retirement plan.</p>
 </div>
 <div class="pillar">
 <div class="pillar-icon">T</div>
