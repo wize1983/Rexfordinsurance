@@ -84,18 +84,30 @@ section { padding: 88px 48px; }
 /* SPHERE DIAGRAM */
 .sphere-wrap { max-width: 760px; margin: 56px auto 0; overflow-x: auto; }
 .sphere-wrap svg { display: block; width: 100%; height: auto; min-width: 560px; }
-.cap-spoke { stroke: var(--blue-light); stroke-width: 1.5; }
+.cap-spoke { stroke: var(--blue-light); stroke-width: 1.5; transition: stroke 0.2s; }
+.cap-node { cursor: pointer; outline: none; }
 .cap-node circle { fill: #fff; stroke: var(--navy); stroke-width: 1.5; transition: all 0.2s; }
 .cap-node:hover circle { stroke: var(--blue); stroke-width: 2.5; }
+.cap-node:focus circle { stroke: var(--blue); stroke-width: 2.5; }
 .cap-node text { font-family: 'Inter', sans-serif; font-size: 12.5px; font-weight: 600; fill: var(--navy); text-anchor: middle; }
+.cap-node.cap-active circle { fill: var(--tint); stroke: var(--gold); stroke-width: 3; }
 .cap-center circle { fill: var(--navy); stroke: var(--gold); stroke-width: 3; }
 .cap-center .cap-center-title { font-family: 'Lora', serif; font-size: 20px; font-weight: 600; fill: #fff; text-anchor: middle; }
 .cap-center .cap-center-sub { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; fill: var(--gold); text-anchor: middle; }
 
 /* CAPABILITY LIST (mobile-friendly fallback / reinforcement) */
 .products-list { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; justify-content: center; }
-.products-list li { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--navy); border: 1px solid var(--gray-line); padding: 9px 18px; border-radius: 3px; transition: all 0.2s; }
+.products-list li { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--navy); border: 1px solid var(--gray-line); padding: 9px 18px; border-radius: 3px; transition: all 0.2s; cursor: pointer; }
 .products-list li:hover { border-color: var(--blue); color: var(--blue); }
+.products-list li.cap-active { border-color: var(--gold); background: var(--tint); color: var(--navy); }
+
+/* CAPABILITY DETAIL PANEL */
+.cap-detail { max-width: 620px; margin: 36px auto 0; background: var(--tint); border: 1px solid var(--gray-line); border-radius: 6px; padding: 30px 34px; text-align: left; opacity: 0; transform: translateY(8px); transition: opacity 0.25s, transform 0.25s; pointer-events: none; }
+.cap-detail.show { opacity: 1; transform: none; pointer-events: auto; }
+.cap-detail-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); margin-bottom: 8px; }
+.cap-detail-title { font-family: 'Lora', serif; font-size: 19px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
+.cap-detail-body { font-size: 14.5px; line-height: 1.7; color: var(--gray-text); }
+.cap-hint { font-size: 13px; color: var(--gray-text); margin-top: 36px; font-style: italic; }
 
 /* PROCESS CARDS (reused problem-card pattern) */
 .problems-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 22px; margin-top: 48px; }
@@ -174,35 +186,35 @@ section { padding: 60px 24px; }
 <text x="450" y="444" class="cap-center-sub">Your Quarterback</text>
 </g>
 
-<g class="cap-node">
+<g class="cap-node" data-cap="0" tabindex="0" role="button" aria-label="Life Insurance">
 <circle cx="450" cy="130" r="72"/>
 <text x="450" y="126"><tspan x="450" dy="0">Life</tspan><tspan x="450" dy="16">Insurance</tspan></text>
 </g>
-<g class="cap-node">
+<g class="cap-node" data-cap="1" tabindex="0" role="button" aria-label="Annuities and Guaranteed Income">
 <circle cx="662.1" cy="217.9" r="72"/>
 <text x="662.1" y="205.9"><tspan x="662.1" dy="0">Annuities &amp;</tspan><tspan x="662.1" dy="16">Guaranteed</tspan><tspan x="662.1" dy="16">Income</tspan></text>
 </g>
-<g class="cap-node">
+<g class="cap-node" data-cap="2" tabindex="0" role="button" aria-label="Retirement Income Planning">
 <circle cx="750" cy="430" r="72"/>
 <text x="750" y="418"><tspan x="750" dy="0">Retirement</tspan><tspan x="750" dy="16">Income</tspan><tspan x="750" dy="16">Planning</tspan></text>
 </g>
-<g class="cap-node">
+<g class="cap-node" data-cap="3" tabindex="0" role="button" aria-label="Trust and Estate Coordination">
 <circle cx="662.1" cy="642.1" r="72"/>
 <text x="662.1" y="638.1"><tspan x="662.1" dy="0">Trust &amp; Estate</tspan><tspan x="662.1" dy="16">Coordination</tspan></text>
 </g>
-<g class="cap-node">
+<g class="cap-node" data-cap="4" tabindex="0" role="button" aria-label="Premium Financing">
 <circle cx="450" cy="730" r="72"/>
 <text x="450" y="726"><tspan x="450" dy="0">Premium</tspan><tspan x="450" dy="16">Financing</tspan></text>
 </g>
-<g class="cap-node">
+<g class="cap-node" data-cap="5" tabindex="0" role="button" aria-label="Buy-Sell and Key Person">
 <circle cx="237.9" cy="642.1" r="72"/>
 <text x="237.9" y="638.1"><tspan x="237.9" dy="0">Buy-Sell &amp;</tspan><tspan x="237.9" dy="16">Key Person</tspan></text>
 </g>
-<g class="cap-node">
+<g class="cap-node" data-cap="6" tabindex="0" role="button" aria-label="Long-Term Care Planning">
 <circle cx="150" cy="430" r="72"/>
 <text x="150" y="426"><tspan x="150" dy="0">Long-Term</tspan><tspan x="150" dy="16">Care Planning</tspan></text>
 </g>
-<g class="cap-node">
+<g class="cap-node" data-cap="7" tabindex="0" role="button" aria-label="CPA, Attorney and Advisor Coordination">
 <circle cx="237.9" cy="217.9" r="72"/>
 <text x="237.9" y="205.9"><tspan x="237.9" dy="0">CPA, Attorney</tspan><tspan x="237.9" dy="16">&amp; Advisor</tspan><tspan x="237.9" dy="16">Coordination</tspan></text>
 </g>
@@ -210,15 +222,22 @@ section { padding: 60px 24px; }
 </div>
 
 <ul class="products-list">
-<li>Life Insurance</li>
-<li>Annuities &amp; Guaranteed Income</li>
-<li>Retirement Income Planning</li>
-<li>Trust &amp; Estate Coordination</li>
-<li>Premium Financing</li>
-<li>Buy-Sell &amp; Key Person</li>
-<li>Long-Term Care Planning</li>
-<li>CPA, Attorney &amp; Advisor Coordination</li>
+<li class="cap-pill" data-cap="0">Life Insurance</li>
+<li class="cap-pill" data-cap="1">Annuities &amp; Guaranteed Income</li>
+<li class="cap-pill" data-cap="2">Retirement Income Planning</li>
+<li class="cap-pill" data-cap="3">Trust &amp; Estate Coordination</li>
+<li class="cap-pill" data-cap="4">Premium Financing</li>
+<li class="cap-pill" data-cap="5">Buy-Sell &amp; Key Person</li>
+<li class="cap-pill" data-cap="6">Long-Term Care Planning</li>
+<li class="cap-pill" data-cap="7">CPA, Attorney &amp; Advisor Coordination</li>
 </ul>
+
+<div class="cap-detail" id="capDetail">
+<p class="cap-detail-eyebrow" id="capDetailEyebrow">Capability</p>
+<h3 class="cap-detail-title" id="capDetailTitle"></h3>
+<p class="cap-detail-body" id="capDetailBody"></p>
+</div>
+<p class="cap-hint" id="capHint">Click any capability above to learn more.</p>
 </div>
 </section>
 
@@ -269,6 +288,49 @@ section { padding: 60px 24px; }
 document.querySelector('.hamburger').addEventListener('click', function() {
 document.querySelector('nav ul').classList.toggle('open');
 });
+</script>
+
+<script>
+(function(){
+var CAP_DATA = [
+{ title: 'Life Insurance', body: 'Whole and term coverage built around the estate you have today, including premium finance and buy-sell strategies.' },
+{ title: 'Annuities & Guaranteed Income', body: 'Fixed and indexed annuities structured around a long-term retirement and wealth transfer plan.' },
+{ title: 'Retirement Income Planning', body: 'Retirement income built around your life insurance and annuities, not bolted on as an afterthought.' },
+{ title: 'Trust & Estate Coordination', body: 'Insurance, beneficiary designations, and legal documents aligned so nothing contradicts itself when your estate transfers.' },
+{ title: 'Premium Financing', body: 'For larger policies, structuring financed premiums so coverage does not require liquidating assets.' },
+{ title: 'Buy-Sell & Key Person', body: 'Funding buy-sell agreements and key person coverage so a business transition does not become a business crisis.' },
+{ title: 'Long-Term Care Planning', body: 'Protecting your retirement income and your family from the cost of extended care.' },
+{ title: 'CPA, Attorney & Advisor Coordination', body: 'We sit at the table with your CPA, attorney, and wealth manager so every piece of the plan lines up.' }
+];
+
+var nodes = document.querySelectorAll('.cap-node');
+var pills = document.querySelectorAll('.cap-pill');
+var detail = document.getElementById('capDetail');
+var titleEl = document.getElementById('capDetailTitle');
+var bodyEl = document.getElementById('capDetailBody');
+var hintEl = document.getElementById('capHint');
+
+function selectCap(id) {
+nodes.forEach(function(n) { n.classList.toggle('cap-active', n.dataset.cap === id); });
+pills.forEach(function(p) { p.classList.toggle('cap-active', p.dataset.cap === id); });
+var d = CAP_DATA[+id];
+if (!d) return;
+titleEl.textContent = d.title;
+bodyEl.textContent = d.body;
+detail.classList.add('show');
+hintEl.style.display = 'none';
+}
+
+nodes.forEach(function(n) {
+n.addEventListener('click', function() { selectCap(n.dataset.cap); });
+n.addEventListener('keydown', function(e) {
+if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectCap(n.dataset.cap); }
+});
+});
+pills.forEach(function(p) {
+p.addEventListener('click', function() { selectCap(p.dataset.cap); });
+});
+})();
 </script>
 </body>
 </html>
