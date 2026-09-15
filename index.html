@@ -52,6 +52,17 @@ nav ul a:hover { color: var(--blue); }
 .nav-cta { background: var(--gold); color: var(--navy) !important; padding: 11px 22px; border-radius: 3px; transition: background 0.2s !important; }
 .nav-cta:hover { background: var(--gold-dark) !important; }
 
+/* HERO */
+.hero-clean { background: var(--navy); padding: 170px 48px 70px; text-align: center; position: relative; overflow: hidden; margin-top: 76px; }
+.hero-clean::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 50%, rgba(240,194,75,0.10) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(29,90,163,0.15) 0%, transparent 50%); }
+.hero-clean .section-eyebrow { justify-content: center; display: flex; color: var(--gold); position: relative; }
+.hero-clean h1 { font-size: clamp(32px, 4.5vw, 50px); line-height: 1.2; color: #fff; margin: 0 auto 20px; position: relative; max-width: 760px; }
+.hero-clean h1 em { font-style: italic; color: var(--blue-light); }
+.hero-clean p.hero-sub { font-size: 16.5px; font-weight: 300; color: rgba(255,255,255,0.78); max-width: 620px; margin: 0 auto 28px; line-height: 1.8; position: relative; }
+.hero-trust { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; font-size: 12px; color: rgba(255,255,255,0.6); margin-bottom: 28px; letter-spacing: 0.03em; position: relative; }
+.hero-trust span:first-child { color: var(--gold); }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; position: relative; }
+
 /* BUTTONS */
 .btn { display: inline-block; padding: 14px 28px; border-radius: 3px; font-size: 13px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: all 0.2s; font-family: 'Inter', sans-serif; border: none; }
 .btn-gold { background: var(--gold); color: var(--navy); }
@@ -164,7 +175,7 @@ footer { background: var(--tint); padding: 36px 48px; border-top: 1px solid var(
 .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; }
 
 @media (max-width: 900px) {
-.hero-panel { margin: 0 20px; max-width: none; }
+.hero-clean { padding: 120px 24px 50px; }
 .split { grid-template-columns: 1fr; }
 .pillars { grid-template-columns: 1fr 1fr; }
 nav ul { display: none; flex-direction: column; align-items: flex-start; gap: 18px; position: absolute; top: 100%; left: 0; width: 100%; background: #fff; padding: 24px; border-bottom: 1px solid var(--gray-line); box-shadow: 0 12px 24px rgba(16,35,63,0.08); }
@@ -198,13 +209,9 @@ section { padding: 60px 24px; }
 </nav>
 
 <!-- HERO -->
-<section class="hero" style="padding:0;">
-<div class="hero-photo">
-<img src="hero-couple-venice-beach.jpg" alt="Couple walking hand in hand on Venice Beach at sunset">
-</div>
-<div class="hero-panel">
-<p class="hero-eyebrow">Your Outsourced Family Office</p>
-<h1>Built to protect everything that matters most.</h1>
+<div class="hero-clean">
+<p class="section-eyebrow">Your Outsourced Family Office</p>
+<h1>Built to protect <em>everything that matters most.</em></h1>
 <p class="hero-sub">We started with life insurance and annuities. Today we coordinate insurance, investments, real estate, compliance, and more, all under one team.</p>
 <div class="hero-trust">
 <span>★★★★★ 5.0 on Google</span>
@@ -218,7 +225,6 @@ section { padding: 60px 24px; }
 <a href="#contact" class="btn btn-outline-light">Guaranteed Income</a>
 </div>
 </div>
-</section>
 
 <div class="tab-strip">
 <a href="#life">Life Insurance</a>
