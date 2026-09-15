@@ -90,11 +90,11 @@ section { padding: 88px 48px; }
 .bg-tint { background: var(--tint); }
 
 /* PILLARS */
-.pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
-.pillar { background: var(--tint); border-radius: 6px; padding: 26px; }
-.pillar-icon { width: 40px; height: 40px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Lora', serif; font-size: 16px; margin-bottom: 16px; }
-.pillar h3 { font-size: 17px; color: var(--navy); margin-bottom: 10px; font-weight: 600; }
-.pillar p { font-size: 14px; color: var(--gray-text); line-height: 1.6; }
+.pillars { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; margin-top: 48px; }
+.pillar { background: var(--tint); border-radius: 6px; padding: 22px; }
+.pillar-icon { width: 36px; height: 36px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Lora', serif; font-size: 15px; margin-bottom: 14px; }
+.pillar h3 { font-size: 15.5px; color: var(--navy); margin-bottom: 8px; font-weight: 600; line-height: 1.3; }
+.pillar p { font-size: 13px; color: var(--gray-text); line-height: 1.55; }
 
 /* PRODUCTS LIST */
 .products-list { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; }
@@ -153,6 +153,9 @@ footer { background: var(--tint); padding: 36px 48px; border-top: 1px solid var(
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; z-index: 200; }
 .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; }
 
+@media (max-width: 1080px) {
+.pillars { grid-template-columns: repeat(3, 1fr); }
+}
 @media (max-width: 900px) {
 .hero-clean { padding: 120px 24px 50px; }
 .split { grid-template-columns: 1fr; }
@@ -221,23 +224,53 @@ section { padding: 60px 24px; }
 <div class="pillars">
 <div class="pillar">
 <div class="pillar-icon">L</div>
-<h3>Whole &amp; Term Life</h3>
-<p>Coverage built around the estate you have today, including premium finance and buy-sell strategies.</p>
+<h3>Legacy Planning</h3>
+<p>Trust and estate coordination that keeps every document, beneficiary, and policy aligned.</p>
 </div>
 <div class="pillar">
-<div class="pillar-icon">A</div>
-<h3>Annuities &amp; Guaranteed Income</h3>
-<p>Fixed and indexed annuities structured around a long-term retirement and wealth transfer plan.</p>
-</div>
-<div class="pillar">
-<div class="pillar-icon">R</div>
-<h3>Retirement Income Planning</h3>
-<p>Retirement planning built around life insurance and annuities — the difference between night and day.</p>
+<div class="pillar-icon">I</div>
+<h3>Life Insurance Strategy</h3>
+<p>Whole, term, and ILITs structured around the estate you're actually building.</p>
 </div>
 <div class="pillar">
 <div class="pillar-icon">T</div>
-<h3>Trust &amp; Estate Coordination</h3>
-<p>Insurance, beneficiary designations, and legal documents aligned so nothing contradicts itself.</p>
+<h3>Tax Strategy</h3>
+<p>Coordinated with your CPA to reduce exposure across income and estate taxes.</p>
+</div>
+<div class="pillar">
+<div class="pillar-icon">E</div>
+<h3>Estate Management</h3>
+<p>Physical property, staff management, bill pay, and travel coordination handled for you.</p>
+</div>
+<div class="pillar">
+<div class="pillar-icon">$</div>
+<h3>Investments</h3>
+<p>Coordinated access and reporting across your investment accounts and managers.</p>
+</div>
+<div class="pillar">
+<div class="pillar-icon">R</div>
+<h3>Real Estate</h3>
+<p>Acquisition, structuring, and oversight for property held inside the family office.</p>
+</div>
+<div class="pillar">
+<div class="pillar-icon">V</div>
+<h3>Venture Capital</h3>
+<p>Direct and fund access to early-stage opportunities vetted for the family.</p>
+</div>
+<div class="pillar">
+<div class="pillar-icon">H</div>
+<h3>Hedge Funds</h3>
+<p>Allocation and manager access across strategies built for diversification.</p>
+</div>
+<div class="pillar">
+<div class="pillar-icon">P</div>
+<h3>Property Management</h3>
+<p>Day-to-day oversight of owned real estate, from maintenance to tenants.</p>
+</div>
+<div class="pillar">
+<div class="pillar-icon">F</div>
+<h3>Company Fiduciary</h3>
+<p>Acting as trustee or fiduciary for family entities and closely held companies.</p>
 </div>
 </div>
 <ul class="products-list">
