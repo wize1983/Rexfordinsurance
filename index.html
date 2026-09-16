@@ -109,16 +109,6 @@ section { padding: 88px 48px; }
 .split.reverse .split-img { order: 2; }
 .split.reverse .split-copy { order: 1; }
 
-/* PROBLEM CARDS */
-.problems-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 22px; margin-top: 48px; }
-.problem-card { border: 1px solid var(--gray-line); border-radius: 6px; padding: 30px; transition: all 0.2s; }
-.problem-card:hover { border-color: var(--blue); box-shadow: 0 10px 30px rgba(16,35,63,0.06); }
-.problem-number { font-family: 'Lora', serif; font-size: 38px; font-weight: 500; color: var(--blue-light); line-height: 1; margin-bottom: 14px; }
-.problem-title { font-size: 19px; font-weight: 600; color: var(--navy); margin-bottom: 12px; line-height: 1.3; }
-.problem-body { font-size: 14px; font-weight: 300; line-height: 1.7; color: var(--gray-text); margin-bottom: 20px; }
-.solution-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); margin-bottom: 8px; }
-.solution-text { font-size: 14px; line-height: 1.7; color: var(--navy); }
-
 /* TESTIMONIALS */
 .testimonial-card { border: 1px solid var(--gray-line); border-radius: 6px; padding: 30px; background: #fff; }
 .stars { color: var(--gold-dark); font-size: 16px; margin-bottom: 14px; }
@@ -203,7 +193,7 @@ section { padding: 60px 24px; }
 <span>Lic. 6017874</span>
 </div>
 <div class="hero-actions">
-<a href="#legacy" class="btn btn-gold">Legacy Planning</a>
+<a href="#life" class="btn btn-gold">Legacy Planning</a>
 <a href="how-we-help.html" class="btn btn-outline-light">Family Office</a>
 </div>
 </div>
@@ -212,7 +202,7 @@ section { padding: 60px 24px; }
 <a href="#life">Life Insurance</a>
 <a href="#estate">Estate Management</a>
 <a href="#healthcare">Healthcare Navigation</a>
-<a href="#legacy">Legacy Planning</a>
+<a href="#life">Legacy Planning</a>
 <a href="how-we-help.html">Family Office</a>
 </div>
 
@@ -351,84 +341,6 @@ section { padding: 60px 24px; }
 <a href="#contact" class="btn btn-navy">Discuss Healthcare Navigation</a>
 </div>
 </div>
-</div>
-</section>
-
-<!-- LEGACY PLANNING PROBLEMS -->
-<section class="bg-tint" id="legacy">
-<div class="section-inner">
-<p class="section-eyebrow">Legacy Planning</p>
-<h2 class="section-title">Make sure your family legacy <em>is protected.</em></h2>
-<p class="section-body">Unexpected risks, market changes, taxes, and life events. We design customized life insurance, annuity, disability, and long-term care strategies to help protect what matters most.</p>
-
-<div class="problems-grid">
-<div class="problem-card">
-<div class="problem-number">01</div>
-<h3 class="problem-title">The policy nobody looked at</h3>
-<p class="problem-body">The policy was placed 15 years ago by someone who moved on. The estate grew. The coverage didn't. Nobody noticed until it was too late.</p>
-<p class="solution-label">Solution</p>
-<p class="solution-text">We start with education. Before anything gets placed, we walk through what you've built, what's actually at risk, and what it takes to transfer it the way you intend.</p>
-</div>
-
-<div class="problem-card">
-<div class="problem-number">02</div>
-<h3 class="problem-title">Coverage built for who you were</h3>
-<p class="problem-body">Your estate has grown. New assets, new structures, new family dynamics. But your coverage looks exactly like it did when you first signed.</p>
-<p class="solution-label">Solution</p>
-<p class="solution-text">We rebuild around the estate you have today — whole life and term coverage, plus fixed and indexed annuities structured around a guaranteed income and long-term wealth transfer plan.</p>
-</div>
-
-<div class="problem-card">
-<div class="problem-number">03</div>
-<h3 class="problem-title">Nobody brought the team together</h3>
-<p class="problem-body">Your CPA, your estate attorney, your wealth manager — they each have a piece of the picture. If nobody has aligned the insurance around the full plan, there are gaps nobody knows about.</p>
-<p class="solution-label">Solution</p>
-<p class="solution-text">We collaborate with your CPA, attorney, and wealth manager to make sure every piece of the plan is aligned before anything is placed.</p>
-</div>
-
-<div class="problem-card">
-<div class="problem-number">04</div>
-<h3 class="problem-title">No trust. No updated will.</h3>
-<p class="problem-body">Many families have a will that's decades old — or no trust at all. Without one, the estate goes through probate: public, slow, and expensive.</p>
-<p class="solution-label">Solution</p>
-<p class="solution-text">We coordinate with your estate attorney so insurance, beneficiary designations, and legal documents move together and nothing contradicts itself when the estate transfers.</p>
-</div>
-
-<div class="problem-card">
-<div class="problem-number">05</div>
-<h3 class="problem-title">The window is closing</h3>
-<p class="problem-body">Life insurance gets harder to qualify for every year you wait. For some, it becomes too costly. For others, health changes take it off the table entirely. The window to lock in coverage is smaller than most people think.</p>
-<p class="solution-label">Solution</p>
-<p class="solution-text">We help you apply while you still qualify — locking in your rate and coverage now, before age or health changes what's available to you.</p>
-</div>
-
-<div class="problem-card">
-<div class="problem-number">06</div>
-<h3 class="problem-title">Retirement income that doesn't count against you</h3>
-<p class="problem-body">Traditional retirement accounts get taxed on withdrawal, and market downturns can shrink your nest egg right when you need income most.</p>
-<p class="solution-label">Solution</p>
-<p class="solution-text">An Indexed Universal Life (IUL) policy is funded through your premium payments — part covers the cost of insurance, and the rest builds cash value credited based on a market index's performance, with a floor that protects you from market losses. Once that cash value has grown, you can access it income-tax-free through policy loans, creating a flexible income stream in retirement. And if you never need to touch it, your family still receives a death benefit.</p>
-</div>
-</div>
-
-<ul class="products-list">
-<li>Whole Life</li>
-<li>Premium Finance</li>
-<li>Term Life</li>
-<li>Retirement Annuities</li>
-<li>Guaranteed Income</li>
-<li>IRA/401(k) Rollover Annuities</li>
-<li>RMD Tax Shelter Strategy</li>
-<li>Disability Income Protection</li>
-<li>Long-Term Care Planning</li>
-<li>Gift Strategy</li>
-<li>SLAT (Spousal Lifetime Access Trust)</li>
-<li>IRA-to-Life-Insurance Strategy</li>
-<li>Special Needs Trust</li>
-<li>Foreign Nationals</li>
-<li>Living Trust</li>
-<li>Will Planning</li>
-</ul>
 </div>
 </section>
 
